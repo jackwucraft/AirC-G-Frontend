@@ -1,0 +1,24 @@
+<!--pages/games/show.wxml-->
+<view class="container">
+<image class="middle" src="{{game.picture_url}}" mode=""/>
+  <view class="middle" style="font-size: 48rpx; margin-bottom: 60rpx;">
+    {{game.name}}
+  </view>
+  <view class="left" style="font-size: 32rpx;">
+    {{game.description}}
+  </view>
+  <view style="font-size: 32rpx;">
+    <view class="right">
+      Price per day ${{game.price_per_day}}    
+    </view>
+  </view>
+  <view>
+    <!-- <button bindtap="" type="primary">Edit</button> -->
+    <view class="btn" bindtap="createBooking">Book</view>
+  </view>
+</view>
+
+
+
+
+
