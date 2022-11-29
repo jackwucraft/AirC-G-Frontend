@@ -1,0 +1,39 @@
+/* pages/games/show.wxss */
+.container {
+  padding: 30rpx 30rpx 80rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 200rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container .left{
+  padding-left: 32rpx;
+}
+
+.container .right{
+  padding-left: 400rpx;
+}
+
+.container .middle{
+  margin: 0 auto;
+}
+
+
+.btn{
+  color: white;
+  padding: 24rpx 36rpx;
+  border-radius: 4rpx;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1rpx solid #0F60C4;
+  width:fit-content;
+  margin: 0 auto;
+}
+
