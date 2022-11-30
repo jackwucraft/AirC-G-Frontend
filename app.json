@@ -2,12 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-<<<<<<< HEAD
     "pages/games/index",
-    "pages/games/profie"
-=======
+    "pages/games/profie",
     "pages/games/show"
->>>>>>> cea1d8d67940608cc06664fec0684719803d465f
   ],
   "window": {
     "backgroundTextStyle":"light",
