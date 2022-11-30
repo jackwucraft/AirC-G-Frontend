@@ -1,5 +1,5 @@
 <!--pages/landing/landing.wxml-->
-<view class="banner" bindtap="goToNextPage">
+<view class="bannerlanding" bindtap="goToNextPage">
   <view>
     <view class="title">
       Air G

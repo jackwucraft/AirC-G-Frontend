@@ -1,0 +1,18 @@
+{
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/games/show",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "setting": {
+    "urlCheck": false
+  }
+}
