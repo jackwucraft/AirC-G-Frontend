@@ -1,10 +1,13 @@
 {
   "pages":[
+    "pages/landing/landing",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/games/index",
+    "pages/games/profie",
     "pages/games/show"
   ],
-  "window":{
+  "window": {
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Air C&G",
