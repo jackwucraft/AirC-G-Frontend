@@ -1,23 +1,22 @@
 <!--pages/games/index.wxml-->
 <view class="banner">
-  <view class="avatar"></view>
+  <view class="avatar"><image src="/images/头像.png"/></view>
   <view class="searchbar"></view>
 </view>
 
-<view class="container">
-  <image src="/images/gamer.png" mode="aspectFill"/>
-</view>
-
-<!-- <view class="container">
-  <view class="avatar"></view>
-</view> -->
-
-<view class="container">
-  <image src="/images/gamer.png" mode="aspectFill"/>
-</view>
-
-<view class="container">
-  <image src="/images/gamer.png" mode="aspectFill"/>
+<view class="test">
+  <view class="test-card">
+    <image src="/images/gamer.png"/>
+    <view class="test-text">game</view>
+  </view>
+  <view class="test-card">
+    <image src="/images/gamer.png"/>
+    <view class="test-text">game</view>
+  </view>
+  <view class="test-card">
+    <image src="/images/gamer.png"/>
+    <view class="test-text">game</view>
+  </view>
 </view>
 
 <view class="card-container">
@@ -25,9 +24,9 @@
     <image src="{{game.picture_url}}" style="width: 300rpx; height: 200rpx; object-fit: cover;" />
     <view class="card-trip-infos">
       <view>
-        <text>{{game.name}}</text>
+        <text style="padding-left: 10rpx;">{{game.name}}</text>
       </view>
-      <text class="card-trip-pricing">${{game.price_per_day}}</text>    
+      <text class="card-trip-pricing" >${{game.price_per_day}}</text>    
     </view>
   </view>
 </view>
