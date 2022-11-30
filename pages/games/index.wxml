@@ -1,20 +1,20 @@
 <!--pages/games/index.wxml-->
 <view class="banner">
   <view class="avatar"><image src="/images/头像.png"/></view>
-  <view class="searchbar"></view>
+  <view bindtap="goToIndex" class="searchbar"></view>
 </view>
 
 <view class="test">
   <view class="test-card" bindtap="showPS5">
-    <image src="/images/gamer.png"/>
+    <image src="/images/game-console-ps.png"/>
     <view class="test-text">PS5</view>
   </view>
   <view class="test-card" bindtap="showXbox">
-    <image src="/images/gamer.png"/>
+    <image src="/images/game-console-xbox.png"/>
     <view class="test-text">Xbox</view>
   </view>
   <view class="test-card" bindtap="showSwitch">
-    <image src="/images/gamer.png"/>
+    <image src="/images/game-console-switch.png"/>
     <view class="test-text">Switch</view>
   </view>
 </view>
