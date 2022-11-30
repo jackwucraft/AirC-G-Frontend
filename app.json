@@ -1,12 +1,16 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/games/index",
+    "pages/games/profie",
+    "pages/games/show"
   ],
-  "window":{
+  "window": {
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "Air C&G",
+    "navigationStyle": "custom",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
