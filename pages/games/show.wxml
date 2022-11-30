@@ -3,10 +3,10 @@
 </view>
 <view class="container">
   <view class="game-card" >
-    <image style="border-radius: 16rpx;" class="middle" src="{{game.picture_url}}" mode=""/>
-      <view class="middle" style="font-size: 48rpx; margin:center;">
+    <view class="middle" style="color: white; font-size: 48rpx; margin:center;">
       {{game.name}}
     </view>
+    <image style="border-radius: 16rpx;" class="middle" src="{{game.picture_url}}" mode=""/>
   </view>
   <view class="left" style="font-size: 32rpx;">
     {{game.description}}
