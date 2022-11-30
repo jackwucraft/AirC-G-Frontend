@@ -27,17 +27,15 @@
   padding-right: 16rpx; */
 /* } */
 
-/* .container .middle{
-  margin: 0 auto; */
-/* } */
+.game-card .middle{
+  margin: 0 auto;
+}
 .game-card{
   border-radius: 16rpx;
   /* padding-top: 310rpx; */
   margin-top: 310rpx;
-}
-.image.middle{
-  padding-left: 0%;
-  padding-right: 0%;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn{
