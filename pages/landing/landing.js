@@ -8,6 +8,7 @@ Page({
 
   },
 
+
   goToNextPage(e) {
     // console.log('what is this event?', e)
     
@@ -37,7 +38,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    // setTimeout( () => {
+    //   if (condition) {
+    //     wx.navigateTo({
+    //       url: '/pages/games/index',
+    //     })
+    //   }
+    // }, 4000)
   },
 
   /**
