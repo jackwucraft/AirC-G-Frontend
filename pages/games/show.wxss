@@ -26,15 +26,20 @@
   padding: 10rpx;
   padding-right: 16rpx; */
 /* } */
+.price{
+  padding-left: 350rpx;
+}
 
 .game-card .middle{
   margin: 0 auto;
+  margin-top: 150rpx
 }
 .game-card{
   border-radius: 16rpx;
   /* padding-top: 310rpx; */
-  margin-top: 310rpx;
+  margin-top: 100rpx;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 

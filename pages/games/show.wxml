@@ -5,14 +5,14 @@
   <view class="game-card" >
     <view class="middle" style="color: white; font-size: 48rpx; margin:center;">
       {{game.name}}
-    </view>
-    <image style="border-radius: 16rpx;" class="middle" src="{{game.picture_url}}" mode=""/>
+  </view>
+  <image style="border-radius: 16rpx;" class="middle" src="{{game.picture_url}}"/>
   </view>
   <view style="font-size: 32rpx;">
     {{game.description}}
   </view>
   <view style="font-size: 32rpx;">
-    <view class="right">
+    <view class="price">
       Price per day ${{game.price_per_day}}    
     </view>
   </view>
