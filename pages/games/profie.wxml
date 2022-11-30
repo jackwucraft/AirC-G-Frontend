@@ -1,0 +1,4 @@
+<!--pages/games/profie.wxml-->
+<view class="banner">
+  <view class="avatar"></view>
+</view>
