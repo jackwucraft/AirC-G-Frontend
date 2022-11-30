@@ -1,0 +1,11 @@
+<!--pages/landing/landing.wxml-->
+<view class="banner" bindtap="goToNextPage">
+  <view>
+    <view class="title">
+      Air G
+    </view>
+    <!-- <navigator url="/pages/stories/index">
+      <button type="primary">Enter</button> 
+    </navigator> -->
+  </view>
+</view>
