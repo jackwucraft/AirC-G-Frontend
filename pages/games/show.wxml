@@ -20,6 +20,3 @@
     <view class="btn" bindtap="showToBooking">Book</view>
   </view>
 </view>
-
-
-
