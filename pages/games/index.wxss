@@ -18,6 +18,12 @@
   margin:auto;
 }
 
+.searchbar1 {
+  position: absolute;
+  right: 10rpx;
+  top: 18rpx;
+}
+
 .avatar image {
   position: absolute;
   left: 20px;
