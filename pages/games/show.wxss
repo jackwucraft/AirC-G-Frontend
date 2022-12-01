@@ -7,16 +7,15 @@
   padding-bottom: 200rpx;
   position: fixed;
   justify-content: column;
-
-}
-
-.price{
-  padding-left: 350rpx;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .game-card .middle{
   margin: 0 auto;
-  margin-top: 150rpx
+  margin-top: 130rpx
 }
 .game-card{
   border-radius: 16rpx;
@@ -29,11 +28,23 @@
 .btn{
   color: white;
   padding: 24rpx 36rpx;
-  border-radius: 8rpx;
+  border-radius: 12rpx;
   font-weight: bold;
   background-color: #08303D;
   transition: background 0.3s ease;
-  /* border: 1rpx solid #0678e2; */
   width:fit-content;
+  margin-bottom: 100rpx;
   margin-right: 50rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.desc{
+  position: relative;
+  margin: 50rpx 50rpx;
+}
+
+.price{
+  margin: 50rpx 50rpx
 }
