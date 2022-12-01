@@ -51,7 +51,8 @@
 }
 
 .test-card {
-  width: 200rpx;
+  width: 300rpx;
+  height: 200rpx;
   /* justify-self: center; */
   /* display: flex; */
   /* justify-content: center; */

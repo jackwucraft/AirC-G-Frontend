@@ -5,17 +5,17 @@
 </view>
 
 <view class="test">
-  <view class="test-card">
-    <image src="/images/gamer.png"/>
-    <view class="test-text">game</view>
+  <view class="test-card" bindtap="showPS5">
+    <image src="/images/game-console-ps.png"/>
+    <view class="test-text">PS5</view>
   </view>
-  <view class="test-card">
-    <image src="/images/gamer.png"/>
-    <view class="test-text">game</view>
+  <view class="test-card" bindtap="showXbox">
+    <image src="/images/game-console-xbox.png"/>
+    <view class="test-text">Xbox</view>
   </view>
-  <view class="test-card">
-    <image src="/images/gamer.png"/>
-    <view class="test-text">game</view>
+  <view class="test-card" bindtap="showSwitch">
+    <image src="/images/game-console-switch.png"/>
+    <view class="test-text">Switch</view>
   </view>
 </view>
 
