@@ -8,12 +8,7 @@ Page({
 
   },
   goToIndex(e) {
-    console.log('goToIndex e', e)
-    const id = e.currentTarget.dataset.id
-    console.log('id', id)
-    wx.navigateTo({
-      url: `/pages/games/index?id=${id}`
-    })
+    this.setData({games: this.data.gamesStorage})
   },    
 
   goToShow(e) {

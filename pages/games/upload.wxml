@@ -1,0 +1,22 @@
+<!--pages/games/upload.wxml-->
+<view class="banner">
+  <view class="header" style="font-size: 48rpx;" >
+  Order Page
+  </view>
+</view>
+<view class="order-container">
+  <view class="order-item" style="font-size:48rpx;">Ordered item
+    <view>name</view>
+  </view>  
+  <view>{{game.name}}</view>
+    <view class="price">
+    <view>price</view> <view>{{game.price}}</view>
+    <view>days rented</view> <view></view>
+  </view>
+</view>
+<view style="font-weight: 900;" class="total-price">
+  TOTAL PRICE {{game.price*days}}    
+</view>
+<view class="btn1">
+  confirm booking  
+</view>

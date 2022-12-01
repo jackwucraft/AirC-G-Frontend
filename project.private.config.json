@@ -4,7 +4,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/games/index",
+          "pathName": "pages/landing/landing",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -25,7 +25,28 @@
         },
         {
           "name": "",
-          "pathName": "pages/games/index",
+          "pathName": "pages/games/profie",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/landing/landing",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/games/profie",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "upload",
+          "pathName": "pages/games/upload",
           "query": "",
           "launchMode": "default",
           "scene": null
