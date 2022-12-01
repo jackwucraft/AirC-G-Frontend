@@ -3,7 +3,8 @@
     "pages/landing/landing",
     "pages/games/index",
     "pages/games/profie",
-    "pages/games/show"
+    "pages/games/show",
+    "pages/games/upload"
   ],
   "window": {
     "backgroundTextStyle":"light",
