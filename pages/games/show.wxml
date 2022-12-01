@@ -17,7 +17,6 @@
     </view>
   </view>
   <view class="btns">
-    <view class="btn-red" bindtap="goToIndex">back</view>
     <view class="btn" bindtap="createBooking">Book</view>
   </view>
 </view>

@@ -7,25 +7,9 @@
   padding-bottom: 200rpx;
   position: fixed;
   justify-content: column;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
 }
 
-/* .container .left{
-  padding-left: 32rpx;
-  background-color: lightgray;
-  border-radius: 16rpx;
-  padding-right: 16rpx;
-} */
-
-/* .container .right{
-  background-color: lightgray;
-  border-radius: 16rpx;
-  padding: 10rpx;
-  padding-right: 16rpx; */
-/* } */
 .price{
   padding-left: 350rpx;
 }
@@ -36,7 +20,6 @@
 }
 .game-card{
   border-radius: 16rpx;
-  /* padding-top: 310rpx; */
   margin-top: 100rpx;
   display: flex;
   justify-content: space-between;
@@ -53,22 +36,4 @@
   /* border: 1rpx solid #0678e2; */
   width:fit-content;
   margin-right: 50rpx;
-}
-
-.btn-red{
-  color: white;
-  padding: 24rpx 36rpx;
-  border-radius: 8rpx;
-  font-weight: bold;
-  background-color: #08303D;
-  transition: background 0.3s ease;
-  /* border: 1rpx solid #ca0b0b; */
-  width:fit-content;
-  margin: 0 auto;
-  margin-right: 320rpx;
-}
-
-.btns {
-  display: flex;
-  justify-content: space-between;
 }
