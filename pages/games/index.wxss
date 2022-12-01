@@ -15,12 +15,18 @@
   padding:50rpx 50 rpx;
 }
 
+.searchbar1 {
+  position: absolute;
+  right: 10rpx;
+  top: 18rpx;
+}
+
 .avatar image {
   position: absolute;
   left: 20px;
   top: 66px;
-  width: 80rpx; 
-  height: 80rpx; 
+  width: 95rpx; 
+  height: 95rpx; 
   /* background-color: rgb(207, 205, 205);
   border-radius: 5rpx; */
 }
