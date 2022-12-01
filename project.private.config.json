@@ -4,7 +4,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/games/create",
+          "pathName": "pages/landing/landing",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -25,7 +25,7 @@
         },
         {
           "name": "",
-          "pathName": "pages/games/index",
+          "pathName": "pages/games/profie",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -39,7 +39,7 @@
         },
         {
           "name": "",
-          "pathName": "pages/games/index",
+          "pathName": "pages/games/profie",
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -17,7 +17,7 @@ page {
 }
 
 .title {
-  margin-bottom: 120rpx;
+  margin-bottom: 21rpx;
   font-size: 80rpx;
   font-weight: bold;
   color: white;
