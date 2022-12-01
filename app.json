@@ -4,11 +4,8 @@
     "pages/games/index",
     "pages/games/profie",
     "pages/games/show",
-<<<<<<< HEAD
-    "pages/games/create"
-=======
+    "pages/games/create",
     "pages/games/upload"
->>>>>>> origin
   ],
   "window": {
     "backgroundTextStyle":"light",
