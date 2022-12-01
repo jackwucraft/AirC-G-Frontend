@@ -26,6 +26,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    const page = this;
+
+    wx.request({
+      url: 'http://localhost:3000/api/v1/games',
+      method: "GET",
+      success(res) {
+        console.log('response from GET stories', res.data)
+        page.setData({games: res.data.games})
+        wx.hideLoading()
+      }
+    })
 
   },
 
