@@ -2,7 +2,7 @@
   "pages":[
     "pages/landing/landing",
     "pages/games/index",
-    "pages/games/profie",
+    "pages/games/profile",
     "pages/games/show",
     "pages/games/create",
     "pages/games/upload"

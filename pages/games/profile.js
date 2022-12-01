@@ -37,6 +37,9 @@ Page({
         wx.hideLoading()
       }
     })
+    // showLikes() ;{
+    
+    // }
 
   },
 

@@ -10,7 +10,7 @@ Page({
   goToIndex(e) {
     this.setData({games: this.data.gamesStorage})
   },    
-
+  
   goToShow(e) {
     console.log('goToShow e', e)
     const id = e.currentTarget.dataset.id
