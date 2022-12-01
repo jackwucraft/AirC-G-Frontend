@@ -7,9 +7,38 @@ Page({
   data: {
 
   },
+  goToIndex(e) {
+    console.log('goToIndex e', e)
+    const id = e.currentTarget.dataset.id
+    console.log('id', id)
+    wx.navigateTo({
+      url: `/pages/games/index?id=${id}`
+    })
+  },    
+
+  goToShow(e) {
+    console.log('goToShow e', e)
+    const id = e.currentTarget.dataset.id
+    console.log('id', id)
+    wx.navigateTo({
+      url: `/pages/games/show?id=${id}`
+    })
+  },
+
+  showPS5() {
+    this.setData({games: this.data.gamesStorage.filter(game => game.platform === "ps5")})
+  },
+
+  showXbox() {
+    this.setData({games: this.data.gamesStorage.filter(game => game.platform === "xbox")})
+  },
+
+  showSwitch() {
+    this.setData({games: this.data.gamesStorage.filter(game => game.platform === "switch")})
+  },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 生命周期函数-监听页面加载
    */
   onLoad(options) {
 
@@ -34,6 +63,7 @@ Page({
       success(res) {
         console.log('response from GET stories', res.data)
         page.setData({games: res.data.games})
+        page.setData({gamesStorage: res.data.games})
         wx.hideLoading()
       }
     })

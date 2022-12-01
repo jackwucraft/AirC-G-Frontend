@@ -8,19 +8,15 @@
   </view>
   <image style="border-radius: 16rpx;" class="middle" src="{{game.picture_url}}"/>
   </view>
-  <view style="font-size: 32rpx;">
+  <view class="desc" style="font-size: 20rpx;">
     {{game.description}}
   </view>
-  <view style="font-size: 32rpx;">
+  <view style="font-size: 48rpx;font-weight: 900;">
     <view class="price">
-      Price per day ${{game.price_per_day}}    
+       Price per day ${{game.price_per_day}}    
     </view>
   </view>
   <view class="btns">
-    <view class="btn-red" bindtap="goToIndex">back</view>
-    <view class="btn" bindtap="createBooking">Book</view>
+    <view class="btn" bindtap="showToBooking">Book</view>
   </view>
 </view>
-
-
-

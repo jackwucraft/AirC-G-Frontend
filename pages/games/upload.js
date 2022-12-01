@@ -1,5 +1,4 @@
-// pages/games/show.js
-const app = getApp
+// pages/games/upload.js
 Page({
 
   /**
@@ -8,42 +7,13 @@ Page({
   data: {
 
   },
-  goToIndex(e) {
-    console.log('goToShow e', e)
-    const id = e.currentTarget.dataset.id
-    console.log('id', id)
-    wx.navigateTo({
-      url: `/pages/games/index?id=${id}`
-    })
-  },
-
-  goToBooking(e) {
-    console.log('goToBooking e', e)
-    const id = e.currentTarget.dataset.id
-    console.log('id', id)
-    wx.navigateTo({
-      url: `/pages/games/form?id=${id}`
-    })
-  },
-
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    const page = this
-    const id = options.id
-    wx.request({
-      url: `http://localhost:3000/api/v1/games/${id}`,
-      method:"GET",
-      success(res) {
-        page.setData({game: res.data.game})
-        console.log(page.data.game)
-      }
-    })
-  },
-  
 
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered
