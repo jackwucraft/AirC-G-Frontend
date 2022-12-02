@@ -58,5 +58,17 @@
 }
 
 .price{
-  margin: 50rpx 50rpx
+  margin: 50rpx 50rpx;
+  font-size: 48rpx;
+  font-weight: 900;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.star{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 80rpx;
 }

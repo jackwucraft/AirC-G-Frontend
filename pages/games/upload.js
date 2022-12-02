@@ -8,11 +8,17 @@ Page({
 
   },
 
+  goToShow(e) {
+    wx.navigateTo({
+      url: `/pages/games/show?id=${this.data.id}`
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-
+    this.setData({id: options.id});
   },
 
   /**

@@ -16,3 +16,14 @@
   background-color: #08303D; 
   padding-top: 200rpx;
 }
+.ghost-btn{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 8px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}

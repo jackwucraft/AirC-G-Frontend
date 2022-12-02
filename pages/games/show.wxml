@@ -11,13 +11,16 @@
   <view class="desc" style="font-size: 20rpx;">
     {{game.description}}
   </view>
-  <view style="font-size: 48rpx;font-weight: 900;">
+  <view class="flex">
     <view class="price">
        Price per day ${{game.price_per_day}}    
     </view>
+    <view bindtap="addlikes fillStar">
+      <image src="/images/star.png" class="star" alt=""/>
+    </view>
   </view>
   <view class="btns">
-    <view class="btn" bindtap="showToBooking">Book</view>
+    <view class="btn" bindtap="goToUpload">Book</view>
     <view class="ghost-btn" bindtap="goToIndex"> </view>
 
   </view>
