@@ -20,6 +20,12 @@ Page({
     })
   },
 
+  goToProfile() {
+    wx.navigateTo({
+      url: '/pages/games/profile',
+    })
+  },
+
   showPS5() {
     this.setData({games: this.data.gamesStorage.filter(game => game.platform === "ps5")})
   },

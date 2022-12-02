@@ -1,6 +1,6 @@
 <!--pages/games/index.wxml-->
 <view class="banner">
-  <view class="avatar"><image src="/images/WechatIMG170.png"/></view>
+  <view class="avatar" bindtap="goToProfile"><image src="/images/WechatIMG170.png"/></view>
   <view class="searchbar" bindtap="goToIndex"><image class="searchbar1" style="height: 30px; width: 30px; margin-right: 0;" src="/images/search_list.png"/></view>
 </view>
 

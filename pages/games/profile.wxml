@@ -1,21 +1,24 @@
 <!--pages/games/profie.wxml-->
 <view class="banner">
-  <view class="avatar"><image src="/images/WechatIMG170.png"/>
+  <view class="avatar" bindtap="goToIndex"><image src="/images/WechatIMG170.png"/>
     <text>hello user</text>
   </view>
 </view>
 
 <view class="texxt">
-  <view class="button">bookings</view>
+  <view class="button" bindtap="showbookings">bookings</view>
   <view class="button">uploads</view>
-  <view class="button">likes</view>
+  <view class="button" bindtap="showlikes">likes</view>
 </view>
 
 <view class="container" data-id="{{game.id}}" wx:for="{{games}}" wx:key="index" wx:for-item="game">
   <image src="{{game.picture_url}}" style="width: 350rpx; height: 230rpx; object-fit: cover; margin: 20rpx;" />
   <view class="card">
+  <view>
     <view class="card-product">{{game.name}}</view>
     <view class="card-product-infos">Product description with relevant info only.</view>
+  </view>
+    <view class="text">£{{game.price_per_day}} Per Day</view>
   </view>
 </view>
 
