@@ -39,7 +39,14 @@
         },
         {
           "name": "",
-          "pathName": "pages/games/show",
+          "pathName": "pages/games/profile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "upload",
+          "pathName": "pages/games/upload",
           "query": "",
           "launchMode": "default",
           "scene": null

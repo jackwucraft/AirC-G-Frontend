@@ -8,6 +8,18 @@ Page({
 
   },
 
+  showbookings(e) {
+    this.setData({games: this.data.gamesStorage})
+  },
+  showlikes() {
+    this.setData({games: this.data.likes})
+  },
+
+  goToIndex() {
+    wx.navigateTo({
+      url: '/pages/games/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -34,13 +46,20 @@ Page({
       success(res) {
         console.log('response from GET stories', res.data)
         page.setData({games: res.data.games})
+        page.setData({gamesStorage: res.data.games})
         wx.hideLoading()
       }
     })
-    // showLikes() ;{
-    
-    // }
-
+    const app = getApp()
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${app.globalData.userId}/likes`,
+      method: "GET",
+      success(res) {
+        console.log('response from GET stories', res.data)
+        page.setData({likes: res.data.games})
+        wx.hideLoading()
+      }
+    })
   },
 
   /**
