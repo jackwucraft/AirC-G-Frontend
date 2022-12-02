@@ -11,10 +11,11 @@ Page({
   },
 
   goToIndex(e) {
-    const id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: `/pages/games/index`
-    })
+    // wx.navigateTo({
+    //   url: `/pages/games/index`
+    // })
+    wx.navigateBack()
+    wx.navigateBack()
   },
 
   bindDateChange1: function (e) {

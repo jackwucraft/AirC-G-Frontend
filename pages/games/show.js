@@ -9,10 +9,11 @@ Page({
 
   },
   goToIndex(e) {
-    const id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: `/pages/games/index?id=${id}`
-    })
+    // const id = e.currentTarget.dataset.id
+    wx.navigateBack();
+    // wx.navigateTo({
+    //   url: `/pages/games/index?id=${id}`
+    // })
   },
 
   goToUpload(e) {
