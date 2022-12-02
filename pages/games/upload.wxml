@@ -37,4 +37,7 @@
 <view style="font-weight: 900;" class="total-price">
   TOTAL PRICE           ${{game.price_per_day * dateBetween}}.00    
 </view>
-<view class="btn1">confirm booking</view>
+<view>
+  <view class="btn1">confirm booking</view>
+  <view class="ghost-btn" bindtap="goToIndex"> </view>
+</view>
