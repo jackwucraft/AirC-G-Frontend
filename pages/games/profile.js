@@ -7,6 +7,7 @@ Page({
   data: {
 
   },
+
   showbookings(e) {
     this.setData({games: this.data.gamesStorage})
   },
