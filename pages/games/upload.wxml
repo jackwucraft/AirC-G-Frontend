@@ -5,19 +5,23 @@
   </view>
 </view>
 <view class="order-container">
-  <view class="order-item" style="font-size:48rpx;">Order number AG52891
-    <view>title</view>
+  <view class="order-item" style="font-size:48rpx;">Order number AG20221202
+    <view class="item-title">Title:</view>
+    <view style="padding-left: 200rpx;"class="item-title">Mario Kart</view>
   </view>  
   <view>{{game.name}}</view>
     <view class="price">
-    <view>price</view> <view>{{game.price}}</view>
-    <view>days rented</view> <view></view>
+    <view>
+      <view>price:</view>
+      <view>days rented:</view> 
+    </view>
+    <view>
+      <view>$6.00</view>
+      <view>3 days</view>
+    </view>
   </view>
 </view>
 <view style="font-weight: 900;" class="total-price">
-  TOTAL PRICE {{game.price*days}}    
+  TOTAL PRICE           $18.00    
 </view>
-<view>
-  <view class="btn1">confirm booking</view>
-  <view class="ghost-btn" bindtap="goToShow"> </view>
-  </view>
+<view class="btn1">confirm booking</view>
