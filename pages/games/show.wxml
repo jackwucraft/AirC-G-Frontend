@@ -15,7 +15,7 @@
     <view class="price">
        Price per day ${{game.price_per_day}}    
     </view>
-    <view bindtap="addlikes fillStar">
+    <view bindtap="addlikes">
       <image src="/images/star.png" class="star" alt=""/>
     </view>
   </view>

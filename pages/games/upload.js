@@ -5,12 +5,36 @@ Page({
    * Page initial data
    */
   data: {
+    startDate: '2022-12-01',
+    endDate: '2022-12-02',
+    dateBetween: 1
+  },
 
+  bindDateChange1: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      startDate: e.detail.value
+    })
+    this.setData({
+      endDate: e.detail.value
+    })
+    this.setData({
+      dateBetween: 0
+    })
+  },
+  bindDateChange2: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      endDate: e.detail.value
+    })
+    this.setData({
+      dateBetween: parseInt(this.data.endDate.slice(-2), 10) - parseInt(this.data.startDate.slice(-2), 10)
+    })
   },
 
   goToShow(e) {
     wx.navigateTo({
-      url: `/pages/games/show?id=${this.data.id}`
+      url: `/pages/games/show?id=${this.data.game.id}`
     })
   },
 
@@ -18,7 +42,16 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    this.setData({id: options.id});
+    const page = this
+    const id = options.id
+    wx.request({
+      url: `http://localhost:3000/api/v1/games/${id}`,
+      method:"GET",
+      success(res) {
+        page.setData({game: res.data.game})
+        console.log(page.data.game)
+      }
+    })
   },
 
   /**
@@ -32,7 +65,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-
+    
   },
 
   /**

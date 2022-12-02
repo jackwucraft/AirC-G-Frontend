@@ -1,5 +1,5 @@
 // pages/games/show.js
-const app = getApp
+const app = getApp()
 Page({
 
   /**
@@ -23,7 +23,18 @@ Page({
       url: `/pages/games/upload?id=${id}`
     })
   },
-
+  addlikes() {
+    const data = { user_id: app.globalData.userId }
+    const id = this.data.game.id
+    wx.request({
+      url: `http://localhost:3000/api/v1/games/${id}/likes`,
+      method:"POST",
+      data: data,
+      success(res) {
+        // console.log(res.games.last)
+      }
+    })
+  },
 
   /**
    * Lifecycle function--Called when page load
