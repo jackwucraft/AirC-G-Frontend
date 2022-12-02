@@ -52,3 +52,10 @@ padding: 24rpx 36rpx;
   right: 0;
   bottom: 0;
 }
+.ghost-btn{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 100rpx;
+  width: 150rpx;
+}
