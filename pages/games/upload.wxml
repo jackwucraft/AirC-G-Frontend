@@ -24,6 +24,5 @@
 <view style="font-weight: 900;" class="total-price">
   TOTAL PRICE           $18.00    
 </view>
-<view class="btn1">
-  confirm booking  
-</view>
+<view class="btn1">confirm booking</view>
+
