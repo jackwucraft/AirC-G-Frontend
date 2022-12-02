@@ -10,6 +10,13 @@ Page({
     dateBetween: 1
   },
 
+  goToIndex(e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/games/index`
+    })
+  },
+
   bindDateChange1: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
