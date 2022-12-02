@@ -5,8 +5,8 @@
   </view>
 </view>
 <view class="order-container">
-  <view class="order-item" style="font-size:48rpx;">Ordered item
-    <view>name</view>
+  <view class="order-item" style="font-size:48rpx;">Order number AG52891
+    <view>title</view>
   </view>  
   <view>{{game.name}}</view>
     <view class="price">
@@ -17,6 +17,7 @@
 <view style="font-weight: 900;" class="total-price">
   TOTAL PRICE {{game.price*days}}    
 </view>
-<view class="btn1">
-  confirm booking  
-</view>
+<view>
+  <view class="btn1">confirm booking</view>
+  <view class="ghost-btn" bindtap="goToShow"> </view>
+  </view>

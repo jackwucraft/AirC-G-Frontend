@@ -9,20 +9,18 @@ Page({
 
   },
   goToIndex(e) {
-    console.log('goToShow e', e)
     const id = e.currentTarget.dataset.id
-    console.log('id', id)
     wx.navigateTo({
       url: `/pages/games/index?id=${id}`
     })
   },
 
-  goToBooking(e) {
-    console.log('goToBooking e', e)
-    const id = e.currentTarget.dataset.id
+  goToUpload(e) {
+    console.log('goToUpload e', e)
+    const id = this.data.game.id
     console.log('id', id)
     wx.navigateTo({
-      url: `/pages/games/form?id=${id}`
+      url: `/pages/games/upload?id=${id}`
     })
   },
 
@@ -56,7 +54,6 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-
   },
 
   /**

@@ -42,12 +42,13 @@
   background-color: white;
   display: flex;
   justify-content: space-evenly;
-  margin: 30rpx;
+  margin: 10rpx;
+  margin-top: 20rpx;
 }
 
 .test-card {
   width: 300rpx;
-  height: 300rpx;
+  height: 200rpx;
   /* justify-self: center; */
   /* display: flex; */
   /* justify-content: center; */
