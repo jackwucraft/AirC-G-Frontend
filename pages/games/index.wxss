@@ -46,6 +46,10 @@
   margin-top: 20rpx;
 }
 
+.test image {
+  width: 150rpx;
+}
+
 .test-card {
   width: 300rpx;
   height: 200rpx;
@@ -56,11 +60,11 @@
 
 .test image {
   background-color:white;
-  width: 50%;
+  width: 140rpx;
   height: 150rpx;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 50%;
   box-shadow: darkgray;
 }
