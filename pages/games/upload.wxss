@@ -16,7 +16,6 @@
 }
 
 .order-item{
-  background: lightgrey;
   border-radius: 8rpx;
   padding-left: 15rpx;
   
@@ -62,4 +61,9 @@ padding: 24rpx 36rpx;
   display: flex;
   display: inline-block;
   justify-content: space-between;
+}
+
+.picker{
+  padding: 13px;
+  background-color: #FFFFFF;
 }
