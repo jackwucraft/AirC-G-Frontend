@@ -44,10 +44,10 @@ Page({
     const page = this
     const id = options.id
     wx.request({
-      url: `http://localhost:3000/api/v1/games/${id}`,
+      url: `http://localhost:3000/api/v1/products/${id}`,
       method:"GET",
       success(res) {
-        page.setData({game: res.data.game})
+        page.setData({game: res.data.product})
         console.log(page.data.game)
       }
     })

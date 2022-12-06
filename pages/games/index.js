@@ -59,12 +59,13 @@ Page({
     const page = this;
 
     wx.request({
-      url: 'http://localhost:3000/api/v1/games',
+      url: 'http://localhost:3000/api/v1/products',
       method: "GET",
       success(res) {
         console.log('response from GET stories', res.data)
-        page.setData({games: res.data.games})
-        page.setData({gamesStorage: res.data.games})
+        const games = res.data.products.filter(product => product.sort === "game")
+        page.setData({games: games})
+        page.setData({gamesStorage: games})
         wx.hideLoading()
       }
     })
