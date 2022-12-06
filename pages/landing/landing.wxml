@@ -2,7 +2,7 @@
 <view class="bannerlanding" bindtap="goToNextPage">
   <view>
     <view class="title">
-      Air G
+      Air C & G
     </view>
     <!-- <navigator url="/pages/stories/index">
       <button type="primary">Enter</button> 
