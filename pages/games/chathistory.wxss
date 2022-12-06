@@ -1,0 +1,42 @@
+/* pages/games/chathistory.wxss */
+.container {
+  margin: 60rpx 40rpx;
+}
+
+.avatar image {
+  position: absolute;
+  left: 183px;
+  top: 96px;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+}
+
+.box {
+  background-color: grey;
+  border: 2rpx solid gray;
+  box-shadow: 0 0 10px gray;
+  width: 33px;
+  height: 59rpx;
+  margin: 45rpx;
+  border-radius: 10rpx;
+}
+
+.bin {
+  position: absolute;
+  right: 45px;
+  top: 247px;
+  font-size: 75rpx;
+}
+
+.text {
+  font-size: larger;
+}
+
+.card {
+  /* border: 2rpx solid; */
+  border-radius: 10rpx;
+  height: 74rpx;
+  background-color: antiquewhite;
+  margin-top: 17rpx;
+}

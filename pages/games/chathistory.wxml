@@ -1,0 +1,15 @@
+<!--pages/games/chathistory.wxml-->
+<view class="banner">
+  <view class="avatar" bindtap="goToIndex"><image src="/images/WechatIMG170.png"/>
+  </view>
+</view>
+
+<view class="container">
+  <view ><image class="box" src="/images/checkbox-checked.png"/></view>
+  <view class="bin">🗑️</view>
+  <view class="text">chat history</view>
+  <view class="card"></view>
+
+
+
+</view>

@@ -4,7 +4,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/games/create",
+          "pathName": "pages/games/chathistory",
           "query": "",
           "launchMode": "default",
           "scene": null
