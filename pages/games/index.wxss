@@ -6,7 +6,7 @@
 
 .searchbar {
   position: absolute;
-  width: 600rpx;
+  width: 630rpx;
   height: 90rpx;
   background-color: rgb(207, 205, 205);
   border-radius: 10rpx;
@@ -21,12 +21,12 @@
 
 .avatar image {
   position: absolute;
-  left: 20px;
+  left: 40px;
   top: 66px;
   width: 95rpx; 
   height: 95rpx; 
-  /* background-color: rgb(207, 205, 205);
-  border-radius: 5rpx; */
+  /* background-color: rgb(207, 205, 205); */
+  border-radius: 10rpx;
 }
 
 .container {
@@ -76,7 +76,8 @@
 }
 
 .card-container {
-  margin: 50rpx;
+  margin-right: 40rpx;
+  margin-left: 55rpx;
   display: flex;
   flex-wrap: wrap;
   gap: 16rpx;
