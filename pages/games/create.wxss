@@ -1,1 +1,76 @@
 /* pages/games/create.wxss */
+.banner {
+  position: relative;
+  width: 100%; 
+  height: 200rpx; 
+  background-color: #08303D; 
+  padding-top: 200rpx;
+}
+
+.containermain {
+  position: relative;
+  margin: 60rpx 40rpx;
+}
+
+.container {
+  border: 1rpx solid;
+  border-radius: 10rpx;
+  margin-top: 60rpx;
+  font-size: xx-large ;
+  width: 600rpx;
+  height: 60rpx;
+  text-align: center;
+  padding: 30rpx;
+  /* text-align: center; */
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  border: 1rpx solid;
+  border-radius: 10rpx;
+  width: 660rpx;
+  height: 450rpx;
+  margin-top: 60rpx;
+  
+}
+
+.cardpic {
+  position: absolute;
+  border: 1rpx solid;
+  border-radius: 6rpx;
+  width: 300rpx;
+  height: 300rpx;
+  bottom: 0rpx;
+}
+
+.text {
+  margin-top: 115rpx;
+  
+  font-weight: bold;
+  font-size: larger;
+}
+
+.text1 {
+  margin-top: 10rpx;
+  
+}
+
+.btn-ghost {
+  background-color: #EF9D3C;
+  padding: 8px 40rpx;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: 50rpx;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  right: 0rpx;
+  bottom: -148rpx;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}

@@ -1,4 +1,22 @@
 <!--pages/games/create.wxml-->
-<view class="container">
-  
+<view class="banner"></view>
+
+<view class="containermain">
+  <view class="container">
+  <view>Name</view>
+  </view>
+
+  <view class="card">
+    <view>description...</view>
+    <view class="cardpic">
+      + click here to add pic
+    </view>
+  </view>
+
+  <view class="text">Price Per Day:</view>
+  <view class="text1">3.456$</view>
+
+  <view class="btn-ghost" href="#">
+    post
+  </view>
 </view>
