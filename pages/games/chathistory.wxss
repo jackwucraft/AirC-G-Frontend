@@ -13,12 +13,9 @@
 }
 
 .box {
-  background-color: grey;
-  border: 2rpx solid gray;
-  box-shadow: 0 0 10px gray;
-  width: 33px;
-  height: 59rpx;
-  margin: 45rpx;
+  width: 27px;
+  height: 45rpx;
+  margin: 3rpx;
   border-radius: 10rpx;
 }
 
