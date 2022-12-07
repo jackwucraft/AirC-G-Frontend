@@ -28,8 +28,9 @@ Page({
     const data = { user_id: app.globalData.userId }
     const id = this.data.game.id
     wx.request({
-      url: `http://localhost:3000/api/v1/games/${id}/likes`,
+      url: `http://localhost:3000/api/v1/products/${id}/likes`,
       method:"POST",
+      header: getApp().globalData.header,
       data: data,
       success(res) {
         // console.log(res.games.last)
@@ -46,6 +47,7 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/products/${id}`,
       method:"GET",
+      header: getApp().globalData.header,
       success(res) {
         page.setData({game: res.data.product})
         console.log(page.data.game)

@@ -2,32 +2,99 @@
 .banner {
   display: flex;
   justify-content: center;
+  height: 400rpx; 
+  
 }
 
-.searchbar {
+swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.inactive{
+  opacity: 50%;
+}
+
+.swiper-block {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  padding: 32rpx;
+  box-sizing: border-box;
+  filter: blur();
+  /* display: flex; */
+}
+
+.swiper-title{
+  margin-top: 40rpx;
+  /* padding-top: 16rpx;
+  padding-left: 54rpx; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 40rpx;
+  width: 66%;
+}
+
+.swiper-des{
+  /* padding-top: 16rpx;
+  padding-left: 56rpx; */
+  margin: 16rpx 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 66%;
+}
+.swiper-button{
+  background-color: #08303D;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24rpx !important;
+  font-weight: bolder;
+  margin: unset;
+  width: fit-content !important;
+  padding: 4rpx 32rpx !important;
+}
+
+/* .swiper-button-text{
+  background-color: #08303D;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24rpx;
+  font-weight: bolder;
+} */
+/* .searchbar {
   position: absolute;
   width: 630rpx;
   height: 90rpx;
   background-color: rgb(207, 205, 205);
   border-radius: 10rpx;
   bottom: 50rpx;
-}
+} */
 
-.searchbar1 {
+/* .searchbar1 {
   position: absolute;
   right: 10rpx;
   top: 18rpx;
-}
+} */
 
-.avatar image {
+/* .avatar image {
   position: absolute;
   left: 40px;
   top: 66px;
   width: 95rpx; 
   height: 95rpx; 
-  /* background-color: rgb(207, 205, 205); */
+  background-color: rgb(207, 205, 205);
   border-radius: 10rpx;
-}
+} */
 
 .container {
   position: relative;
@@ -35,7 +102,6 @@
   width: 30rpx;
   display: inline-flex;
   margin: 100rpx;
-  
 }
 
 .test {
@@ -44,6 +110,7 @@
   justify-content: space-evenly;
   margin: 10rpx;
   margin-top: 20rpx;
+  margin-bottom: 40rpx;
 }
 
 .test image {
@@ -52,7 +119,7 @@
 
 .test-card {
   width: 300rpx;
-  height: 200rpx;
+  /* height: 200rpx; */
   /* justify-self: center; */
   /* display: flex; */
   /* justify-content: center; */
@@ -76,33 +143,53 @@
 }
 
 .card-container {
-  margin-right: 40rpx;
-  margin-left: 55rpx;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16rpx;
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 156px;
+  grid-gap: 32rpx;
+  justify-content: center;
+  padding: 0 32rpx;
+  box-sizing:border-box;
 }
 
 .card-trip {
-  width: 300rpx;
-  height: 300rpx;
-  overflow: auto;
   background: white;
-  box-shadow: 0 0 15rpx rgba(0,0,0,0.2);
+  box-shadow: 8rpx 8rpx 32rpx rgba(0,0,0,0.25);
   /* border: solid; */
-  border-radius: 3rpx;
-  border-style: groove;
-  margin-bottom: 20rpx;
   border-radius: 20rpx;
   font-size: smaller;
+  width: 100%;
 }
 
 .card-trip .card-trip-infos {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  /* display: flex;
+  flex-direction: column; */
+  padding: 16rpx;
+  /* justify-content: space-between;
+  align-items: flex-end; */
+}
+.card-text {
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+  /* padding-left: 15rpx;
+  padding-right: 15rpx; */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
 
-.card-trip .card-trip-pricing {
-  padding-right: 10rpx;
+
+.card-trip-infos .card-trip-pricing {
+  /* position: absolute;
+  right: 15rpx; */
+  /* padding-left: 15rpx; */
+  /* display: flex; */
+  font-size: smaller;
+  height: 33%;
+  font-family: Arial, Helvetica, sans-serif;
 }

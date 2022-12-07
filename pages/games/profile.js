@@ -41,6 +41,7 @@ Page({
     wx.request({
       url: 'http://localhost:3000/api/v1/products',
       method: "GET",
+      header: getApp().globalData.header,
       success(res) {
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
@@ -53,6 +54,7 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/users/${app.globalData.userId}/likes`,
       method: "GET",
+      header: getApp().globalData.header,
       success(res) {
         console.log('response from GET stories', res.data)
         page.setData({likes: res.data.products})

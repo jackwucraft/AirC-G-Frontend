@@ -15,7 +15,7 @@ Page({
     // wx.switchTab({
     //   url: '/pages/stories/index',
     // })
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/games/index',
     })
   },

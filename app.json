@@ -8,6 +8,22 @@
     "pages/games/upload",
     "pages/games/chathistory"
   ],
+  "tabBar": {
+    "custom": false,
+    "color": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+        {
+            "pagePath": "pages/games/index",
+            "text": "Games"
+        },
+        {
+            "pagePath": "pages/games/profile",
+            "text": "Profile"
+        }
+    ]
+  },
   "window": {
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
