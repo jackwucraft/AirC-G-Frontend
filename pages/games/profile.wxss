@@ -37,7 +37,6 @@
   /* height: 180px; */
   background: white;
   /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
-  border: groove;
   padding-bottom: 10rpx;
   margin-left: 50rpx;
   margin-right: 50rpx;

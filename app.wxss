@@ -12,9 +12,9 @@
 .banner {
   position: relative;
   width: 100%; 
-  height: 200rpx; 
+  height: 470rpx; 
   background-color: #08303D; 
-  padding-top: 200rpx;
+  /* padding-top: 200rpx; */
 }
 .ghost-btn{
   display: inline-block;
@@ -26,4 +26,8 @@
   text-align: center;
   outline: none;
   text-decoration: none;
+}
+
+.white {
+  color: #fff;
 }

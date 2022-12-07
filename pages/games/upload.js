@@ -55,6 +55,7 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/products/${id}`,
       method:"GET",
+      header: getApp().globalData.header,
       success(res) {
         page.setData({game: res.data.product})
         console.log(page.data.game)
