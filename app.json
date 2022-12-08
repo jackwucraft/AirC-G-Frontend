@@ -5,7 +5,6 @@
     "pages/games/profile",
     "pages/games/show",
     "pages/games/create",
-    "pages/games/upload",
     "pages/games/chathistory"
   ],
   "tabBar": {
@@ -16,13 +15,15 @@
     "list": [
         {
             "pagePath": "pages/games/index",
-            "text": "Games",
-            "iconPath": "images/999.png"
+            "iconPath": "/images/index-inactive.png",
+            "selectedIconPath": "/images/index-active.png",
+            "text": "Games"
         },
         {
             "pagePath": "pages/games/profile",
-            "text": "Profile",
-            "iconPath": "images/666.png"
+            "iconPath": "/images/profile-inactive.png",
+            "selectedIconPath": "/images/profile-active.png",
+            "text": "Profile"
         }
     ]
   },
