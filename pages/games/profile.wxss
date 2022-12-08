@@ -1,6 +1,8 @@
-/* .banner {
- 
-} */
+.background {
+  height: 228px;
+  width: 100%;
+  filter: blur(11px);
+}
 
 .avatar image {
   position: absolute;
@@ -19,22 +21,77 @@
   font-weight: 900;
   line-height: 38rpx;
   color: white;
+} 
+
+.container {
+  margin: 32rpx;
 }
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  background: #CED6D8;
+  color: white;
+  border-radius: 100px;
+  height: 90rpx;
+  margin: 60rpx 0;
+  border: 1px solid #CED6D8;
+}
+
+.btn {
+  width: 50%;
+  /* border: 1px solid #4A4A4A; */
+  padding: 8px 24px;
+  border-radius: 100px;
+  /* font-weight: lighter; */
+  transition: opacity 0.3s ease;
+  /* width: 180rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-active {
+  background-color: #08303D !important;
+  color: white;
+}
+
 
 .card {
-  margin: 32rpx;
+  margin-bottom: 68rpx;
   border: 1rpx solid gainsboro;
   border-radius: 16rpx;
+  height: 312rpx;
 }
 
-.cardimage {
-  width: 100%; 
-  height: 208px;
-}
+/* .cardimage {
+  
+} */
 
 .text {
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-  padding-left: 70rpx;
+  padding: 16rpx 38rpx;
+  font-size: 24rpx;
+}
+
+.text1 {
+  font-weight: 900;
+  font-size: 26rpx;
+  font-family: system-ui;
+}
+
+.text2 {
+  font-size: 20rpx;
 }

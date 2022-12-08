@@ -16,11 +16,13 @@
     "list": [
         {
             "pagePath": "pages/games/index",
-            "text": "Games"
+            "text": "Games",
+            "iconPath": "images/999.png"
         },
         {
             "pagePath": "pages/games/profile",
-            "text": "Profile"
+            "text": "Profile",
+            "iconPath": "images/666.png"
         }
     ]
   },
