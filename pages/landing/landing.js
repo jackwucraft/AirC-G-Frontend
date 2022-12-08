@@ -15,9 +15,11 @@ Page({
     // wx.switchTab({
     //   url: '/pages/stories/index',
     // })
-    wx.switchTab({
-      url: '/pages/games/index',
-    })
+    if (getApp().globalData.userId) {
+      wx.switchTab({
+        url: '/pages/games/index',
+      })
+    }
   },
 
   /**

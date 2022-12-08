@@ -23,9 +23,9 @@ App({
             _this.globalData.header = { Authorization: loginRes.header['Authorization'] }
             // event.emit('tokenReady')
             _this.globalData.userId = _this.globalData.user.id
-            wx.switchTab({
-              url: '/pages/games/index',
-            })
+            // wx.switchTab({
+            //   url: '/pages/games/index',
+            // })
           }
         })
       }

@@ -1,12 +1,15 @@
 <!--pages/landing/landing.wxml-->
 <!-- <view class="bannerlanding" bindtap="goToNextPage"> -->
-<view class="bannerlanding">
+<!-- <navigator url="/pages/stories/index">
+      <button type="primary">Enter</button> 
+    </navigator> -->
+<view class="bannerlanding" bindtap="goToNextPage">
+  <!-- <image src="/images/image\ 2.png" class="bannerlanding" mode=""/> -->
   <view>
     <view class="title">
       Air C & G
     </view>
-    <!-- <navigator url="/pages/stories/index">
-      <button type="primary">Enter</button> 
-    </navigator> -->
+    
   </view>
 </view>
+<!-- <image src="/images/image\ 2.png" class="bannerlanding" mode=""/> -->
