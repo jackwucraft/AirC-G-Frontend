@@ -15,10 +15,14 @@
     "list": [
         {
             "pagePath": "pages/games/index",
+            "iconPath": "/images/index-inactive.png",
+            "selectedIconPath": "/images/index-active.png",
             "text": "Games"
         },
         {
             "pagePath": "pages/games/profile",
+            "iconPath": "/images/profile-inactive.png",
+            "selectedIconPath": "/images/profile-active.png",
             "text": "Profile"
         }
     ]

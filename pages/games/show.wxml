@@ -25,6 +25,7 @@
 </view> -->
 <view class="show-container">
   <view class="banner" style="background-image: url('{{game.picture_url}}');background-size: 100%;">
+    <image src="/images/Group 23.png" mode="" bindtap="goToIndex" class="back-button"/>
   </view>
   <view class="title-card"> 
     <view class="game-title">
