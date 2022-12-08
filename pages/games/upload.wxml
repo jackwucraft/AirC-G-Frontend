@@ -10,12 +10,12 @@
     <view style="padding-left: 200rpx;"class="item-title">{{game.name}}</view>
   </view>
    <view>
-    <picker mode="date" value="{{startDate}}" start="2022-12-02" end="2022-12-31" bindchange="bindDateChange1">
-    <view class="picker">
-      Start Date :{{startDate}}
+      <picker mode="date" value="{{startDate}}" start="2022-12-02" end="2022-12-31" bindchange="bindDateChange1">
+      <view class="picker">
+        Start Date :{{startDate}}
+      </view>
+      </picker>
     </view>
-  </picker>
-  </view>
   <view>
     <picker mode="date" value="{{endDate}}" start="{{startDate}}" end="2022-12-31" bindchange="bindDateChange2">
     <view class="picker">
