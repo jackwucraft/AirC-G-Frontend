@@ -1,25 +1,55 @@
 <!--pages/games/profie.wxml-->
 <view class="banner">
-  <view class="avatar" bindtap="goToIndex"><image src="/images/WechatIMG170.png"/>
-    <text>hello you!</text>
+  <image class="background" mode="aspectFill" src="/images/WechatIMG170.png" />
+  <view class="avatar">
+    <image src="/images/WechatIMG170 1.png" />
+    <text class="name">金城武</text>
   </view>
 </view>
 
-<view class="texxt">
-  <view class="button" bindtap="showbookings">bookings</view>
-  <view class="button">uploads</view>
-  <view class="button" bindtap="showlikes">likes</view>
-</view>
+<view class="container">
 
-<view class="container" data-id="{{game.id}}" wx:for="{{games}}" wx:key="index" wx:for-item="game">
-  <image src="{{game.picture_url}}" style="width: 600rpx; height: 400rpx; object-fit: cover; border-radius: 8rpx; margin: 20rpx;" />
-  <view class="card">
-  <view>
-    <view class="card-product">{{game.name}}</view>
-    <view class="card-product-infos">Product description with relevant info only.</view>
+  <view class="btn-container">
+    <view class="btn  {{activeTab === 'bookings' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadBookings">
+      <image class="btn-icon" src="/images/history 1.png" />
+      <view>Bookings</view> 
+    </view>
+
+    <view class="btn {{activeTab === 'favorites' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadFavorites">
+      <image class="btn-icon" src="/images/777.png" />
+      <view>
+        Favorites
+      </view>
+    </view>
   </view>
-    <view class="text">${{game.price_per_day}} Per Day</view>
+
+  <view wx:if="{{activeTab==='bookings'}}">
+    <view wx:for="{{games}}" wx:key="index" wx:for-item="game" class="card">
+      <view class="cardimage">
+        <image style="width: 100%; height: 208rpx" src="{{game.picture_url}}" mode="aspectFill" />
+      </view>
+      <view class="text">
+        <view>
+          <view class="text1">{{game.name}}</view>
+          <view class="text2">{{game.price_per_day}} RMB/day</view>
+        </view>
+        <view class="date">Dec 16, 2022</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{activeTab==='favorites'}}">
+    <view wx:for="{{favorites}}" wx:key="index" wx:for-item="game" class="card">
+      <view class="cardimage">
+        <image style="width: 100%; height: 208rpx" src="{{game.picture_url}}" mode="aspectFill" />
+      </view>
+      <view class="text">
+        <view>
+          <view class="text1">{{game.name}}</view>
+          <view>{{game.price_per_day}} RMB/day</view>
+        </view>
+        <view class="date">Dec 16, 2022</view>
+      </view>
+    </view>
   </view>
 </view>
-
-<!-- <view class="btn">create uploads</view> -->
