@@ -71,6 +71,15 @@
 .banner{
   height: 470rpx;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-button{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 32rpx;
+  margin-top: 70rpx;
 }
 
 .show-container{
@@ -140,6 +149,7 @@
 .star{
   width: 32rpx;
   height: 32rpx;
+  margin-right: 16rpx;
 }
 
 .saved{
