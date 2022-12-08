@@ -87,16 +87,16 @@ Page({
         page.setData({gamesStorage: games})
         // const first = games[1]
         // page.setData({first})
-        const header = [] //[games[Math.floor(Math.random()*games.length)]
+        const swiper_data = [] //[games[Math.floor(Math.random()*games.length)]
         for (var i = 0;i < 5; i++) {
           if (games.length > 0) {
             var randindex = Math.floor(Math.random()*games.length)
-            header[i] = games[randindex]
+            swiper_data[i] = games[randindex]
             games.splice(randindex, 1)
           } else {
             break
           }
-        page.setData({header})
+        page.setData({swiper_data})
         }
         wx.hideLoading()
       }

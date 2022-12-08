@@ -3,7 +3,7 @@
   <!-- <view class="avatar" bindtap="goToProfile"><image src="/images/WechatIMG170.png"/></view> -->
   <!-- <view class="searchbar" bindtap="goToIndex"><image class="searchbar1" style="height: 30px; width: 30px; margin-right: 0;" src="/images/search_list.png"/></view> -->
   <swiper duration="500" interval="6000" next-margin="0" previous-margin="0" current="0" indicator-dots="true" autoplay="true" circular="true">
-    <block wx:for="{{header}}" wx:key="index" wx:for-item="game">
+    <block wx:for="{{swiper_data}}" wx:key="index" wx:for-item="game">
       <swiper-item style="width: 100%;">
         <view class="swiper-block" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0,  0.2), rgba(0, 0, 0, 0.2)), url('{{game.picture_url}}');">
           <view class="swiper-title white"> {{game.name}} </view>
