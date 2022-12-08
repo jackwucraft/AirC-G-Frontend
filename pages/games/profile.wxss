@@ -1,102 +1,40 @@
+/* .banner {
+ 
+} */
 
 .avatar image {
   position: absolute;
   left: 165px;
-  top: 96px;
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 8rpx;
+  top: 58px;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 100rpx;
 }
 
-.avatar text {
+.name {
   position: absolute;
-  left: 158px;
-  top: 161px;
-}
-
-.texxt {
-  display: flex;
-  /* padding: 80rpx; */
-  /* margin: 10rpx; */
-  /* padding-left: 65rpx; */
-  justify-content: space-evenly;
-  margin-left: 25rpx;
-  margin-bottom: 30rpx;
-  margin-top: 30rpx;
-}
-
-.button {
-  width: 300rpx;
-  padding: 20rpx;
-  text-align: center;
-  /* border: 1px solid #4A4A4A;
-  border-radius: 50px; */
-}
-
-.container {
-  /* height: 180px; */
-  background: white;
-  /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
-  padding-bottom: 10rpx;
-  margin-left: 50rpx;
-  margin-right: 50rpx;
-  margin-bottom: 50rpx;
-  border-radius: 18rpx;
-}
-
-/* .container img {
-  width: 167px;
-  height: 105px;
-  object-fit: cover;
-  margin: 15rpx;
-  width: 300rpx;
-  height: 200rpx; 
-} */
-
-.card-product {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-product-infos {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: -3px;
+  left: 186px;
+  top: 162px;
+  font-size: 32rpx;
+  font-weight: 900;
+  line-height: 38rpx;
+  color: white;
 }
 
 .card {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 32rpx;
-  padding-right: 32rpx;
-  padding-bottom: 16rpx;
+  margin: 32rpx;
+  border: 1rpx solid gainsboro;
+  border-radius: 16rpx;
 }
 
-.card .text{
-  font-size: 16px;
-  margin: 0;
-  letter-spacing: -0.02em;
-  font-family: "CircularStd-Bold", sans-serif;
-  font-weight: bolder;
+.cardimage {
+  width: 100%; 
+  height: 208px;
 }
 
-.btn {
-  position: fixed; 
-  bottom: 0rpx;
-  color: white;
-  padding: 0px 105px;
-  border-radius: 30px;
-  font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
-  margin: 30rpx 110rpx;
-}
-
-.btn:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+.text {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding-left: 70rpx;
 }

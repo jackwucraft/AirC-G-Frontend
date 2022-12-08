@@ -8,16 +8,8 @@ Page({
 
   },
 
-  showbookings(e) {
-    this.setData({games: this.data.gamesStorage})
-  },
-  showlikes() {
-    this.setData({games: this.data.likes})
-  },
+  
 
-  goToIndex() {
-    wx.navigateBack();
-  },
   /**
    * 生命周期函数--监听页面加载
    */
