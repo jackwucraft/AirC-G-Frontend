@@ -5,7 +5,6 @@
     "pages/games/profile",
     "pages/games/show",
     "pages/games/create",
-    "pages/games/upload",
     "pages/games/chathistory"
   ],
   "tabBar": {

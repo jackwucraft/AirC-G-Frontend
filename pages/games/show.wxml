@@ -1,7 +1,5 @@
 <!--pages/games/show.wxml-->
-<view class="banner">
-</view>
-<view class="container">
+<!-- <view class="container">
   <view class="game-card" >
     <view class="middle" style="color: white; font-size: 48rpx; margin:center;">
       {{game.name}}
@@ -23,5 +21,51 @@
     <view class="btn" bindtap="goToUpload">Book</view>
     <view class="ghost-btn" bindtap="goToIndex"> </view>
 
+  </view>
+</view> -->
+<view class="show-container">
+  <view class="banner" style="background-image: url('{{game.picture_url}}');background-size: 100%;">
+  </view>
+  <view class="title-card"> 
+    <view class="game-title">
+      {{game.name}}
+    </view>
+    <view class="price-and-button">
+      <view class="game-price">
+        {{game.price_per_day}} RMB/day
+      </view>
+      <button class="{{favorite_text === 'Favorite' ? 'unsaved' : 'saved'}}" bindtap="addlikes">
+        <image wx:if="{{favorite_text === 'Favorite'}}" src="/images/Vector.png" class="star" mode=""/>
+        {{favorite_text}}
+      </button>
+    </view>
+  </view>
+  <view class="des-and-date">
+    <view class="des-title">
+      Description
+    </view>
+    <view class="des-text">
+      {{game.description}}
+    </view>
+    <view class="picker-title">
+      Booking Start Date
+    </view>
+    <picker mode="date" value="{{startDate}}" start="2022-12-02" end="2022-12-31" bindchange="startDateChange">
+      <view class="picker">
+          {{startDate}}
+      </view>
+    </picker>
+    <view class="picker-title">
+      Booking End Date
+    </view>
+    <picker mode="date" value="{{endDate}}" start="{{startDate}}" end="2022-12-31" bindchange="endDateChange">
+      <view class="picker">
+          {{endDate}}
+      </view>
+    </picker>
+  </view>
+  <view class="btn-controller">
+    <button class="book-button">Book for ¥{{game.price_per_day*dateBetween}}</button>
+    <button bindtap="goToIndex" class="share-button">Share</button>
   </view>
 </view>

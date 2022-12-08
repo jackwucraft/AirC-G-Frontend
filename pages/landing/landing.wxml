@@ -1,5 +1,6 @@
 <!--pages/landing/landing.wxml-->
-<view class="bannerlanding" bindtap="goToNextPage">
+<!-- <view class="bannerlanding" bindtap="goToNextPage"> -->
+<view class="bannerlanding">
   <view>
     <view class="title">
       Air C & G
