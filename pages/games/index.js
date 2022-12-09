@@ -1,4 +1,5 @@
 // pages/games/index.js
+const app = getApp()
 Page({
 
   /**
@@ -77,7 +78,7 @@ Page({
     const page = this;
 
     wx.request({
-      url: 'http://localhost:3000/api/v1/products',
+      url: `${app.globalData.baseUrl}/products`,
       method: "GET",
       header: getApp().globalData.header,
       success(res) {

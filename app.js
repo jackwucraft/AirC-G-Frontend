@@ -14,7 +14,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log('res', res);
         wx.request({
-          url: 'http://localhost:3000/api/v1/login',
+          url: `${this.globalData.baseUrl}/login`,
           method: 'POST',
           data: { code: res.code },
           success(loginRes) {
@@ -33,6 +33,8 @@ App({
   },
   globalData: {
     userInfo: null,
+    // baseUrl: "http://localhost:3000/api/v1",
+    baseUrl: "https://airgandc.wogengapp.cn/api/v1"
     // userId: 6
   }
 })
