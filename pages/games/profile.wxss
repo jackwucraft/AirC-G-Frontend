@@ -72,6 +72,8 @@
   border: 1rpx solid gainsboro;
   border-radius: 16rpx;
   height: 312rpx;
+  overflow: hidden;
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.2);
 }
 
 /* .cardimage {
