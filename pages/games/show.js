@@ -160,14 +160,6 @@ Page({
    * Called when user click on the top right corner to share
    */
 
-  share: function () {
-    wx.getShareInfo({
-      shareTicket: {
-
-      }
-    })
-  },
-
   onShareAppMessage() {
     return {
       title: this.data.game.name,

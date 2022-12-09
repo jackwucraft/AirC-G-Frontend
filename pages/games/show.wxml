@@ -67,6 +67,6 @@
   </view>
   <view class="btn-controller">
     <button bindtap="goToBook" class="book-button">Book for ¥{{game.price_per_day*dateBetween}}</button>
-    <button open-type="share" class="share-button">Share</button>
+    <button open-type="share" data-id="share" class="share-button">Share</button>
   </view>
 </view>
