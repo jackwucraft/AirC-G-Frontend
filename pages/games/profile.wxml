@@ -1,9 +1,9 @@
 <!--pages/games/profie.wxml-->
 <view class="banner">
   <image class="background" mode="aspectFill" src="{{user.avartar_url}}" />
-  <view class="avatar">
+  <view class="avatar-container">
     <image src="{{user.avartar_url}}" />
-    <text class="name">{{user.nickname}}</text>
+    <view class="name">{{user.nickname}}</view>
   </view>
 </view>
 
@@ -24,7 +24,7 @@
   </view>
 
   <view wx:if="{{activeTab==='bookings'}}">
-    <view bindtap="goToShow" wx:for="{{games}}" wx:key="index" wx:for-item="game" class="card">
+    <view bindtap="goToShow" data-id="{{game.id}}" wx:for="{{games}}" wx:key="index" wx:for-item="game" class="card">
       <view class="cardimage">
         <image style="width: 100%; height: 208rpx" src="{{game.picture_url}}" mode="aspectFill" />
       </view>
