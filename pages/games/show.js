@@ -159,7 +159,20 @@ Page({
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage() {
 
+  share: function () {
+    wx.getShareInfo({
+      shareTicket: {
+
+      }
+    })
+  },
+
+  onShareAppMessage() {
+    return {
+      title: this.data.game.name,
+      path: `/games/show?id=${this.data.game.id}`,
+      imageUrl: this.data.game.picture_url
+    }
   }
 })
