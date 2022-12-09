@@ -4,23 +4,26 @@
   filter: blur(11px);
 }
 
-.avatar image {
+.avatar-container {
   position: absolute;
-  left: 165px;
-  top: 58px;
+  left: 50%;
+  transform:translateX(-50%);
+  top: 140rpx;
+}
+
+.avatar-container image {
   width: 160rpx;
   height: 160rpx;
   border-radius: 100rpx;
 }
 
 .name {
-  position: absolute;
-  left: 186px;
-  top: 162px;
-  font-size: 32rpx;
-  font-weight: 900;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
   line-height: 38rpx;
   color: white;
+  font-size: 14px;
 } 
 
 .container {
