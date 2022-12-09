@@ -39,14 +39,10 @@ Page({
       header: getApp().globalData.header,
       success(res) {
         console.log('response from GET stories', res.data)
-        page.setData({ likes: res.data.products })
+        page.setData({ favorites: res.data.products })
         wx.hideLoading()
       }
     })
-  },
-
-  loadBookings() {
-    const page = this;
     wx.request({
       url: 'http://localhost:3000/api/v1/products',
       method: "GET",
@@ -55,31 +51,55 @@ Page({
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
         page.setData({ games: games })
-        page.setData({ gamesStorage: games })
         wx.hideLoading()
         page.setData({activeTab: "bookings"})
       }
     })
   },
 
-  loadFavorites (){
-    console.log("loadFavorites:")
-    const page = this;
-    const userId = app.globalData.userId
-    wx.request({
-      url: `http://localhost:3000/api/v1/users/${userId}/likes`,
-      method: "GET",
-      header: getApp().globalData.header,
-      success(res) {
-        // console.log(res.data.products)
-        console.log('response from GET favorites', res.data)
-        const favorites = res.data.products
-        page.setData({favorites})
-        page.setData({activeTab: "favorites"})
-        // page.setData({ gamesStorage: games })
-        wx.hideLoading()
-      }
-    })
+  // loadBookings() {
+  //   const page = this;
+  //   wx.request({
+  //     url: 'http://localhost:3000/api/v1/products',
+  //     method: "GET",
+  //     header: getApp().globalData.header,
+  //     success(res) {
+  //       console.log('response from GET stories', res.data)
+  //       const games = res.data.products.filter(product => product.sort === "game")
+  //       page.setData({ games: games })
+  //       page.setData({ gamesStorage: games })
+  //       wx.hideLoading()
+  //       page.setData({activeTab: "bookings"})
+  //     }
+  //   })
+  // },
+
+  loadBookings() {
+    this.setData({activeTab: "bookings"})
+  },
+
+  // loadFavorites (){
+  //   console.log("loadFavorites:")
+  //   const page = this;
+  //   const userId = app.globalData.userId
+  //   wx.request({
+  //     url: `http://localhost:3000/api/v1/users/${userId}/likes`,
+  //     method: "GET",
+  //     header: getApp().globalData.header,
+  //     success(res) {
+  //       // console.log(res.data.products)
+  //       console.log('response from GET favorites', res.data)
+  //       const favorites = res.data.products
+  //       page.setData({favorites})
+  //       page.setData({activeTab: "favorites"})
+  //       // page.setData({ gamesStorage: games })
+  //       wx.hideLoading()
+  //     }
+  //   })
+  // },
+
+  loadFavorites () {
+    this.setData({activeTab: "favorites"})
   },
   /**
    * 生命周期函数--监听页面隐藏
