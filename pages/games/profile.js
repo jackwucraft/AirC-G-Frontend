@@ -7,16 +7,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    activeTab: 'bookings'
+    activeTab: 'bookings',
   },
 
-
+  goToShow(e) {
+    console.log('goToShow e', e)
+    const id = e.currentTarget.dataset.id
+    console.log('id', id)
+    wx.navigateTo({
+      url: `/pages/games/show?id=${id}`
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    
   },
 
   /**
@@ -31,8 +38,12 @@ Page({
    */
   onShow() {
     const page = this;
-    this.loadBookings();
     const app = getApp()
+    page.setData({
+      user: app.globalData.user,
+      userId: app.globalData.userId
+    })
+    this.loadBookings();
     wx.request({
       url: `http://localhost:3000/api/v1/users/${app.globalData.userId}/likes`,
       method: "GET",

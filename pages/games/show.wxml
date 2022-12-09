@@ -66,7 +66,7 @@
     </picker>
   </view>
   <view class="btn-controller">
-    <button class="book-button">Book for ¥{{game.price_per_day*dateBetween}}</button>
+    <button bindtap="goToBook" class="book-button">Book for ¥{{game.price_per_day*dateBetween}}</button>
     <button bindtap="goToIndex" class="share-button">Share</button>
   </view>
 </view>

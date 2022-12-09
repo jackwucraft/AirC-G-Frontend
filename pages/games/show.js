@@ -18,6 +18,20 @@ Page({
     // })
   },
 
+  goToBook(e) {
+    wx.showModal({
+      title: '提示',
+      content: 'Book!',
+      success (res) {
+        if (res.confirm) {
+          console.log('confirm')
+        } else if (res.cancel) {
+          console.log('cancel')
+        }
+      }
+    })    
+  },
+
   // goToUpload(e) {
   //   console.log('goToUpload e', e)
   //   const id = this.data.game.id
