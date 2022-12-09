@@ -1,9 +1,9 @@
 <!--pages/games/profie.wxml-->
 <view class="banner">
   <image class="background" mode="aspectFill" src="{{user.avartar_url}}" />
-  <view class="avatar">
+  <view class="avatar-container">
     <image src="{{user.avartar_url}}" />
-    <text class="name">{{user.nickname}}</text>
+    <view class="name">{{user.nickname}}</view>
   </view>
 </view>
 
@@ -24,7 +24,7 @@
   </view>
 
   <view wx:if="{{activeTab==='bookings'}}">
-    <view bindtap="goToShow" wx:for="{{games}}" wx:key="index" wx:for-item="game" class="card">
+    <view bindtap="goToShow" data-id="{{game.id}}" wx:for="{{games}}" wx:key="index" wx:for-item="game" class="card">
       <view class="cardimage">
         <image style="width: 100%; height: 208rpx" src="{{game.picture_url}}" mode="aspectFill" />
       </view>
@@ -39,14 +39,14 @@
   </view>
 
   <view wx:if="{{activeTab==='favorites'}}">
-    <view bindtap="goToShow" wx:for="{{favorites}}" wx:key="index" wx:for-item="game" class="card">
+    <view bindtap="goToShow" data-id="{{game.id}}" wx:for="{{favorites}}" wx:key="index" wx:for-item="game" class="card">
       <view class="cardimage">
         <image style="width: 100%; height: 208rpx" src="{{game.picture_url}}" mode="aspectFill" />
       </view>
       <view class="text">
         <view>
           <view class="text1">{{game.name}}</view>
-          <view>{{game.price_per_day}} RMB/day</view>
+          <view class="text2">{{game.price_per_day}} RMB/day</view>
         </view>
         <view class="date">Dec 16, 2022</view>
       </view>
