@@ -45,7 +45,7 @@ Page({
     })
     this.loadBookings();
     wx.request({
-      url: `http://localhost:3000/api/v1/users/${app.globalData.userId}/likes`,
+      url: `${app.globalData.baseUrl}/users/${app.globalData.userId}/likes`,
       method: "GET",
       header: getApp().globalData.header,
       success(res) {
@@ -55,7 +55,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://localhost:3000/api/v1/products',
+      url: `${app.globalData.baseUrl}/products`,
       method: "GET",
       header: getApp().globalData.header,
       success(res) {
