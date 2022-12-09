@@ -78,8 +78,8 @@
 .back-button{
   height: 60rpx;
   width: 60rpx;
-  margin-left: 32rpx;
-  margin-top: 107rpx;
+  margin-left: 17rpx;
+  margin-top: 100rpx;
 }
 
 .show-container{
