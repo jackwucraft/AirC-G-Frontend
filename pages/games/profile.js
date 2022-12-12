@@ -1,6 +1,6 @@
 // pages/games/profie.js
 const app = getApp()
-
+import event from '@codesmiths/event';
 Page({
 
   /**
@@ -25,31 +25,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    
+    // this.setData({id: options.id})
+    // if (getApp().globalData.header) {
+    //   this.loginLoad();
+    // } else {
+    //   event.on('tokenReady', this, this.loginLoad)
+    // }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-    const page = this;
-    page.setData({
-      user: app.globalData.user,
-      userId: app.globalData.userId,
-    })
-    if (app.globalData.user.avartar_url !== null) {
-      page.setData({
-        avatarUrl: app.globalData.user.avartar_url
-      })
-    }
-    this.loadBookings();
+  loginLoad() {
+    const page = this
     wx.request({
       url: `${app.globalData.baseUrl}/users/${app.globalData.userId}/likes`,
       method: "GET",
@@ -72,6 +57,26 @@ Page({
         page.setData({activeTab: "bookings"})
       }
     })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+    const page = this;
+    // this.loadBookings();
+    if (getApp().globalData.header) {
+      this.loginLoad();
+    } else {
+      event.on('tokenReady', this, this.loginLoad)
+    }
   },
 
   // loadBookings() {
