@@ -24,37 +24,9 @@
           "scene": null
         },
         {
-          "name": "upload",
-          "pathName": "pages/games/upload",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
           "name": "",
           "pathName": "pages/games/index",
           "query": "id=1",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/games/profile",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "upload",
-          "pathName": "pages/games/upload",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/games/show",
-          "query": "",
           "launchMode": "default",
           "scene": null
         }
