@@ -1,9 +1,15 @@
 <!--pages/games/profie.wxml-->
 <view class="banner">
-  <image class="background" mode="aspectFill" src="{{user.avartar_url}}" />
+  <image class="background" mode="aspectFill" src="{{avatarUrl}}" />
   <view class="avatar-container">
-    <image src="{{user.avartar_url}}" />
-    <view class="name">{{user.nickname}}</view>
+    <!-- <image src="{{user.avartar_url}}" /> -->
+    <button style="background: unset" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" src="{{avatarUrl}}"></image>
+    </button>
+    <!-- <view class="name">{{user.nickname}}</view> -->
+
+    <input class="input" placeholder="{{nickName}}"/>
+
   </view>
 </view>
 
@@ -12,7 +18,7 @@
   <view class="btn-container">
     <view class="btn  {{activeTab === 'bookings' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadBookings">
       <image class="btn-icon" src="/images/history 1.png" />
-      <view>Bookings</view> 
+      <view>Bookings</view>
     </view>
 
     <view class="btn {{activeTab === 'favorites' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadFavorites">
