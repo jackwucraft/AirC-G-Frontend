@@ -38,7 +38,6 @@ Page({
    */
   onShow() {
     const page = this;
-    const app = getApp()
     page.setData({
       user: app.globalData.user,
       userId: app.globalData.userId
