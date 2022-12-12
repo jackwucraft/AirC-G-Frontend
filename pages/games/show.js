@@ -1,5 +1,6 @@
 // pages/games/show.js
 const app = getApp()
+import event from '@codesmiths/event';
 Page({
 
   /**
@@ -10,6 +11,34 @@ Page({
     endDate: '2022-12-02',
     dateBetween: 1
   },
+
+  loginShow() {
+    const page = this
+    wx.request({
+      url: `${app.globalData.baseUrl}/products/${page.data.id}`,
+      method:"GET",
+      header: getApp().globalData.header,
+      success(res) {
+        page.setData({game: res.data.product})
+        console.log(page.data.game)
+      }
+    })
+    wx.request({
+      url: `${app.globalData.baseUrl}/users/${getApp().globalData.userId}/likes`,
+      method:"GET",
+      header: getApp().globalData.header,
+      success(res) {
+        // console.log(res.data.products.map(product => product.name))
+        // console.log(page.data.game.name)
+        if (res.data.products.map(product => product.id).includes(page.data.game.id)) {
+          page.setData({favorite_text: "Saved to Favorites!"})
+        } else {
+          page.setData({favorite_text: "Favorite"})
+        }
+      }
+    })
+  },
+
   goToIndex(e) {
     // const id = e.currentTarget.dataset.id
     wx.navigateBack();
@@ -20,13 +49,15 @@ Page({
 
   goToBook(e) {
     wx.showModal({
-      title: '提示',
-      content: 'Book!',
+      title: 'Booking Status',
+      content: 'Your booking has been made succesfully!',
+      cancelText:'Cancle',
+      confirmText:'Confirm',
       success (res) {
         if (res.confirm) {
-          console.log('confirm')
+          console.log('用户点击确定')
         } else if (res.cancel) {
-          console.log('cancel')
+          console.log('用户点击取消')
         }
       }
     })    
@@ -85,31 +116,12 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    const page = this
-    const id = options.id
-    wx.request({
-      url: `${app.globalData.baseUrl}/products/${id}`,
-      method:"GET",
-      header: getApp().globalData.header,
-      success(res) {
-        page.setData({game: res.data.product})
-        console.log(page.data.game)
-      }
-    })
-    wx.request({
-      url: `${app.globalData.baseUrl}/users/${getApp().globalData.userId}/likes`,
-      method:"GET",
-      header: getApp().globalData.header,
-      success(res) {
-        // console.log(res.data.products.map(product => product.name))
-        // console.log(page.data.game.name)
-        if (res.data.products.map(product => product.id).includes(page.data.game.id)) {
-          page.setData({favorite_text: "Saved to Favorites!"})
-        } else {
-          page.setData({favorite_text: "Favorite"})
-        }
-      }
-    })
+    this.setData({id: options.id})
+    if (getApp().globalData.header) {
+      this.loginShow();
+    } else {
+      event.on('tokenReady', this, this.loginShow)
+    }
   },
   
 
