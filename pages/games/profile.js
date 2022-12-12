@@ -8,6 +8,8 @@ Page({
    */
   data: {
     activeTab: 'bookings',
+    avatarUrl: "/images/avatar-default.png",
+    nickName: "Enter your name here"
   },
 
   goToShow(e) {
@@ -41,8 +43,13 @@ Page({
     const app = getApp()
     page.setData({
       user: app.globalData.user,
-      userId: app.globalData.userId
+      userId: app.globalData.userId,
     })
+    if (app.globalData.user.avartar_url !== null) {
+      page.setData({
+        avatarUrl: app.globalData.user.avartar_url
+      })
+    }
     this.loadBookings();
     wx.request({
       url: `${app.globalData.baseUrl}/users/${app.globalData.userId}/likes`,
@@ -146,5 +153,45 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail
+    this.setData({ avatarUrl })
+    this.updateUserInfo()
+  },
+
+  inputNickname(e) {
+    const nickName = e.detail.value
+    console.log("inputNickname: nickname", nickName)
+    this.setData({ nickName })
+
+    // wx.request to update the user in the backend
+
+    // update the globaldata.user
+  },
+
+  updateUserInfo(e) {
+    const avatarUrl = this.data.avatarUrl
+    const data = {
+      // nickname: "user.nickname", 
+      avartar_url: avatarUrl
+    }
+    wx.request({
+      url: `${app.globalData.baseUrl}/users/${this.data.userId}`,
+      method: "PUT",
+      data: data,
+      header: getApp().globalData.header,
+      success(res) {
+        console.log("user info update successfully!")
+        app.globalData.user.avartar_url = avatarUrl
+        // console.log('response from PUT user', res.data)
+        // const games = res.data.products.filter(product => product.sort === "game")
+        // page.setData({ games: games })
+        // wx.hideLoading()
+        // page.setData({activeTab: "bookings"})
+      }
+    })
+  } 
+
 })

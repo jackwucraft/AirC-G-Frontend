@@ -20,13 +20,15 @@ Page({
 
   goToBook(e) {
     wx.showModal({
-      title: '提示',
-      content: 'Book!',
+      title: 'Booking Status',
+      content: 'Your booking has been made succesfully!',
+      cancelText:'Cancle',
+      confirmText:'Confirm',
       success (res) {
         if (res.confirm) {
-          console.log('confirm')
+          console.log('用户点击确定')
         } else if (res.cancel) {
-          console.log('cancel')
+          console.log('用户点击取消')
         }
       }
     })    
