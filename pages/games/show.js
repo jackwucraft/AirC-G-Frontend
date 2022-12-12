@@ -9,7 +9,8 @@ Page({
   data: {
     startDate: '2022-12-01',
     endDate: '2022-12-02',
-    dateBetween: 1
+    dateBetween: 1,
+    favorite_text: "Favorite"
   },
 
   loginShow() {
