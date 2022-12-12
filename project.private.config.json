@@ -33,7 +33,7 @@
         {
           "name": "",
           "pathName": "pages/games/index",
-          "query": "",
+          "query": "id=1",
           "launchMode": "default",
           "scene": null
         },
