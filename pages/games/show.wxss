@@ -116,15 +116,17 @@
 }
 
 .price-and-button {
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
   /* align-content: end; */
   align-items: flex-end;
-  position: absolute;
+  /* position: absolute; */
   bottom: 40rpx;
-  right: 32rpx;
+  right: 16rpx;
   left: 32rpx;
+  top: 16rpx;
+  margin-top: 16rpx;
 }
 
 .game-price {
@@ -143,7 +145,7 @@
   margin: unset;
   width: 266rpx !important;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .star{
