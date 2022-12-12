@@ -37,7 +37,7 @@
       <view class="text">
         <view>
           <view class="text1">{{game.name}}</view>
-          <view class="text2">{{game.price_per_day}} RMB/day</view>
+          <!-- <view class="text2">{{game.price_per_day}} RMB/day</view> -->
         </view>
         <view class="date">Dec 16, 2022</view>
       </view>
@@ -52,7 +52,7 @@
       <view class="text">
         <view>
           <view class="text1">{{game.name}}</view>
-          <view class="text2">{{game.price_per_day}} RMB/day</view>
+          <!-- <view class="text2">{{game.price_per_day}} RMB/day</view> -->
         </view>
         <view class="date">Dec 16, 2022</view>
       </view>
