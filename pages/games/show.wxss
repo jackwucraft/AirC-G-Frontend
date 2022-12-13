@@ -80,6 +80,8 @@
   width: 60rpx;
   margin-left: 17rpx;
   margin-top: 100rpx;
+  background-color: #fffdfd3b;
+  border-radius: 8rpx;
 }
 
 .show-container{
@@ -115,7 +117,7 @@
   /* padding-bottom: 38rpx; */
 }
 
-.price-and-button {
+.owner-and-button {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -129,11 +131,19 @@
   margin-top: 16rpx;
 }
 
-.game-price {
+.game-owner {
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+  top: 140rpx;
+}
+
+
+/* .game-price {
   font-size: 28rpx;
   width: 264rpx;
-  align-items: flex-end;
-}
+  align-items: flex-end; */
+
 
 .unsaved {
   background-color: #ffffff;
