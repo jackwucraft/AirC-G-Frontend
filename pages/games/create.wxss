@@ -6,7 +6,7 @@
   justify-content: flex-start;
 }
 
-.show-container{
+.create-container{
   position: fixed;
   top: 0; bottom: 0;
   left: 0; right: 0;
@@ -17,7 +17,7 @@
 }
 
 .title-card{
-  justify-content: space-between;
+  justify-content: flex-start;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -32,70 +32,39 @@
   box-shadow: 4rpx 4rpx 16rpx rgba(0,0,0,0.4);
 }
 
-.containermain {
-  position: relative;
-  margin: 60rpx 40rpx;
+.title-input{
+  border: 1rpx solid black;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  font-size: 28rpx;
 }
 
-.container {
-  border: 1rpx solid;
-  border-radius: 10rpx;
-  margin-top: 60rpx;
-  font-size: xx-large ;
-  width: 600rpx;
-  height: 60rpx;
-  text-align: center;
-  padding: 30rpx;
-  /* text-align: center; */
-  justify-content: center;
+.subtitle{
+  font-size: 32rpx;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 16rpx;
 }
 
-.card {
-  position: relative;
-  border: 1rpx solid;
-  border-radius: 10rpx;
-  width: 660rpx;
-  height: 450rpx;
-  margin-top: 60rpx;
-  
+.des-and-con {
+  /* align-self: start;
+  justify-self: flex-start; */
+  padding: 0rpx 64rpx 0rpx 64rpx;
+  /* margin-top: 156rpx; */
+  margin-top: 188rpx;
+  max-height: 799rpx;
+  overflow: scroll;
 }
 
-.cardpic {
-  position: absolute;
-  border: 1rpx solid;
-  border-radius: 6rpx;
-  width: 300rpx;
-  height: 300rpx;
-  bottom: 0rpx;
+.picker {
+  padding: 10rpx 0rpx 10rpx 16rpx;
+  border: 1rpx solid black;
+  border-radius: 16rpx;
+  margin-bottom: 16rpx;
 }
 
-.text {
-  margin-top: 115rpx;
-  
-  font-weight: bold;
-  font-size: larger;
-}
-
-.text1 {
-  margin-top: 10rpx;
-  
-}
-
-.btn-ghost {
-  background-color: #EF9D3C;
-  padding: 8px 40rpx;
-  border-radius: 50px;
-  font-weight: bold;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  width: 50rpx;
-  justify-content: center;
-  text-align: center;
-  position: absolute;
-  right: 0rpx;
-  bottom: -148rpx;
-}
-
-.btn-ghost:hover {
-  opacity: 1;
+.description {
+  padding: 10rpx 0rpx 200rpx 16rpx;
+  border: 1rpx solid black;
+  border-radius: 16rpx;
 }
