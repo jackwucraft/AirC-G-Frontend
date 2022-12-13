@@ -9,7 +9,7 @@ Page({
   data: {
     activeTab: 'bookings',
     avatarUrl: "/images/avatar-default.png",
-    nickName: ""
+    // nickName: ""
   },
 
   goToShow(e) {
@@ -57,6 +57,10 @@ Page({
         page.setData({activeTab: "bookings"})
       }
     })
+    if (app.globalData.user.avatar_url !== null) {
+      this.setData({avatarUrl: app.globalData.user.avatar_url}) }
+    if (app.globalData.user.nickname !== null) {
+      this.setData({nickName: app.globalData.user.nickname}) }
   },
 
   /**
@@ -76,12 +80,7 @@ Page({
     } else {
       event.on('tokenReady', this, this.loginLoad)
     }
-    // console.log(app.globalData.user.avartar_url)
-
-    if (app.globalData.user.avartar_url !== null) {
-      this.setData({avatarUrl: app.globalData.user.avartar_url}) }
-    if (app.globalData.user.nickname !== null) {
-      this.setData({nickName: app.globalData.user.nickname}) }
+    // console.log(app.globalData.user.avatar_url)
   },
 
   // loadBookings() {
@@ -192,7 +191,7 @@ Page({
     const nickName = this.data.nickName
     const data = {
       nickname: nickName, 
-      avartar_url: avatarUrl
+      avatar_url: avatarUrl
     }
     wx.request({
       url: `${app.globalData.baseUrl}/users/${app.globalData.userId}`,
@@ -202,7 +201,7 @@ Page({
       success(res) {
         console.log("user info update successfully!")
         // console.log(res)
-        app.globalData.user.avartar_url = res.data.user.avartar_url
+        app.globalData.user.avatar_url = res.data.user.avatar_url
         // console.log('response from PUT user', res.data)
         // const games = res.data.products.filter(product => product.sort === "game")
         // page.setData({ games: games })
