@@ -121,6 +121,10 @@ Page({
   //   })
   // },
 
+  loadUploads() {
+    this.setData({activeTab: "uploads"})
+  },
+
   loadFavorites () {
     this.setData({activeTab: "favorites"})
   },
@@ -171,6 +175,8 @@ Page({
     const nickName = e.detail.value
     console.log("inputNickname: nickname", nickName)
     this.setData({ nickName })
+    this.updateUserInfo()
+
 
     // wx.request to update the user in the backend
 
@@ -178,10 +184,11 @@ Page({
   },
 
   updateUserInfo(e) {
-    // console.log(this.data.avatarUrl)
+    const avatarUrl = this.data.avatarUrl
+    const nickName = this.data.nickName
     const data = {
-      // nickname: "user.nickname", 
-      avartar_url: this.data.avatarUrl
+      nickname: nickName, 
+      avartar_url: avatarUrl
     }
     wx.request({
       url: `${app.globalData.baseUrl}/users/${app.globalData.userId}`,

@@ -30,43 +30,61 @@
   margin: 32rpx;
 }
 
-.btn-container {
+/* .btn-container {
   display: flex;
   width: 100%;
   background: #CED6D8;
-  color: white;
-  border-radius: 100px;
-  height: 90rpx;
-  margin: 60rpx 0;
-  border: 1px solid #CED6D8;
+  color: white; */
+  /* border-radius: 100px; */
+  /* height: 90rpx; */
+  /* margin: 60rpx 0; */
+  /* border: 1px solid #CED6D8; */
+/* } */
+
+/* .btn {
+  width: 50%; */
+  /* border: 1px solid #4A4A4A; */
+  /* padding: 8px 24px;
+  border-radius: 100px; */
+  /* font-weight: lighter; */
+  /* transition: opacity 0.3s ease; */
+  /* width: 180rpx; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.btn-container {
+  /* background-color: grey; */
+  color: grey;
+  margin: 20rpx 0rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .btn {
-  width: 50%;
-  /* border: 1px solid #4A4A4A; */
-  padding: 8px 24px;
-  border-radius: 100px;
-  /* font-weight: lighter; */
-  transition: opacity 0.3s ease;
-  /* width: 180rpx; */
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn-icon {
+  display: flex;
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  gap: 5rpx;
 }
 
-.btn:hover {
+/* .btn:hover {
   opacity: 1;
-}
+} */
 
 .btn-active {
-  background-color: #08303D !important;
-  color: white;
+  /* background-color: #08303D !important; */
+  color: black;
+  border-bottom: 5rpx solid black;
 }
 
 
