@@ -77,7 +77,11 @@ Page({
       event.on('tokenReady', this, this.loginLoad)
     }
     // console.log(app.globalData.user.avartar_url)
-    this.setData({avatarUrl: app.globalData.user.avartar_url})
+
+    if (app.globalData.user.avartar_url !== null) {
+      this.setData({avatarUrl: app.globalData.user.avartar_url}) }
+    if (app.globalData.user.nickname !== null) {
+      this.setData({nickName: app.globalData.user.nickname}) }
   },
 
   // loadBookings() {
