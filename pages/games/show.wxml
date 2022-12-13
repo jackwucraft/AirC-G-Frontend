@@ -31,10 +31,10 @@
     <view class="game-title">
       {{game.name}}
     </view>
-    <view class="price-and-button">
-      <!-- <view class="game-owner">
+    <view class="owner-and-button">
+      <view class="game-owner">
         <image src="avartar_url" mode=""/>  {{user.nickName}}
-      </view> -->
+      </view>
       <button class="{{favorite_text === 'Favorite' ? 'unsaved' : 'saved'}}" bindtap="addlikes">
         <image wx:if="{{favorite_text === 'Favorite'}}" src="/images/Vector.png" class="star" mode=""/>
         {{favorite_text}}
