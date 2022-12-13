@@ -121,7 +121,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  /* align-content: end; */
+  align-content: end;
   align-items: flex-end;
   /* position: absolute; */
   bottom: 40rpx;
@@ -132,10 +132,10 @@
 }
 
 .game-owner {
-  position: absolute;
-  left: 50%;
-  transform:translateX(-50%);
+  left: 32rpx;
+  transform:translateX(-145%);
   top: 140rpx;
+  margin-bottom: 14rpx;
 }
 
 
