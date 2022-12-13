@@ -53,6 +53,7 @@ Page({
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
         page.setData({ games: games })
+        page.setData({uploads: games.filter(game => game.user_id == app.globalData.userId)})
         wx.hideLoading()
         page.setData({activeTab: "bookings"})
       }
@@ -202,6 +203,7 @@ Page({
         console.log("user info update successfully!")
         // console.log(res)
         app.globalData.user.avatar_url = res.data.user.avatar_url
+        app.globalData.user.nickname = res.data.user.nickname
         // console.log('response from PUT user', res.data)
         // const games = res.data.products.filter(product => product.sort === "game")
         // page.setData({ games: games })
