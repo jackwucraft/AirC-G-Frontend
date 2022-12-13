@@ -8,7 +8,7 @@
     </button>
     <!-- <view class="name">{{user.nickname}}</view> -->
 
-    <input class="input" bindblur="inputNickname" placeholder="{{nickName}}"/>
+    <input class="input" bindblur="inputNickname" placeholder="Enter your name here" value="{{nickName}}"/>
   </view>
 </view>
 

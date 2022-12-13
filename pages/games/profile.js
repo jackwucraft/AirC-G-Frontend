@@ -9,7 +9,7 @@ Page({
   data: {
     activeTab: 'bookings',
     avatarUrl: "/images/avatar-default.png",
-    nickName: "Enter your name here"
+    nickName: ""
   },
 
   goToShow(e) {
