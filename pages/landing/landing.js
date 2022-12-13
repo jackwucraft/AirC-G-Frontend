@@ -1,4 +1,5 @@
 // pages/landing/landing.js
+import event from "@codesmiths/event";
 Page({
 
   /**
@@ -47,6 +48,11 @@ Page({
     //     })
     //   }
     // }, 4000)
+    if (getApp().globalData.userId) {
+      goToNextPage()
+    } else {
+      event.on('tokenReady', this, this.goToNextPage)
+    }
   },
 
   /**

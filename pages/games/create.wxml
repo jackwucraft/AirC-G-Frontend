@@ -1,22 +1,25 @@
 <!--pages/games/create.wxml-->
 <view class="banner"></view>
 
-<view class="containermain">
+<form bindsubmit="Upload">
+  <view class="containermain">
   <view class="container">
-  <view>Name</view>
+  <input value="{{userName}}" placeholder="name" name="name"/>
   </view>
 
   <view class="card">
-    <view>description...</view>
-    <view class="cardpic">
+    <input type="text" value="{{userDescription}}" placeholder="description" name="description"/>
+    <!-- <view class="cardpic">
       + click here to add pic
+    </view> -->
+  </view>
+
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="console">
+    <view class="picker">
+      当前选择：{{array[index]}}
     </view>
-  </view>
+  </picker>
 
-  <view class="text">Price Per Day:</view>
-  <view class="text1">3.456$</view>
-
-  <view class="btn-ghost" href="#">
-    post
-  </view>
+  <button class="btn-ghost" form-type="submit"></button>
 </view>
+</form>

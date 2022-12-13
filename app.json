@@ -21,6 +21,12 @@
             "text": "Games"
         },
         {
+          "pagePath": "pages/games/create",
+          "iconPath": "/images/plus 1.png",
+          "selectedIconPath": "/images/plus.png",
+          "text": "create"
+        },
+        {
             "pagePath": "pages/games/profile",
             "iconPath": "/images/profile-inactive.png",
             "selectedIconPath": "/images/profile-active.png",
