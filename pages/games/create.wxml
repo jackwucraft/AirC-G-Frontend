@@ -1,25 +1,30 @@
 <!--pages/games/create.wxml-->
+<view class="create-container">
+
 <view class="banner"></view>
 
 <form bindsubmit="Upload">
-  <view class="containermain">
-  <view class="container">
-  <input value="{{userName}}" placeholder="name" name="name"/>
+  <view class="title-card">
+    <view class="subtitle">Title:</view>
+    <input value="{{userName}}" placeholder="name" name="name" class="title-input"/>
   </view>
-
-  <view class="card">
-    <input type="text" value="{{userDescription}}" placeholder="description" name="description"/>
+  <view class="des-and-con">
     <!-- <view class="cardpic">
       + click here to add pic
     </view> -->
-  </view>
-
+    <view class="subtitle">
+      Console Type:
+    </view>
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="console">
     <view class="picker">
-      当前选择：{{array[index]}}
+      {{array[index]}}
     </view>
   </picker>
-
-  <button class="btn-ghost" form-type="submit"></button>
-</view>
+  <view class="subtitle">
+      Description:
+  </view>
+  <input type="text" value="{{userDescription}}" placeholder="description" name="description" class="description"/>
+  <button form-type="submit"> submit </button>
+  </view>
 </form>
+</view>
