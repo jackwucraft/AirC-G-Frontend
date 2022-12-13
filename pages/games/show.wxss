@@ -142,7 +142,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 26rpx !important;
   font-weight: bolder;
-  margin: unset;
+  margin: 0rpx 24rpx 0rpx 0rpx !important;
   width: 266rpx !important;
   display: flex;
   /* justify-content: center; */
@@ -163,7 +163,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 26rpx !important;
   font-weight: bolder;
-  margin: unset;
+  margin: 0rpx 24rpx 0rpx 0rpx !important;
   width: 266rpx !important;
   padding: 16rpx 0rpx !important;
   /* height: 64rpx !important; */

@@ -1,5 +1,6 @@
 // pages/games/index.js
 const app = getApp()
+import event from '@codesmiths/event';
 Page({
 
   /**
@@ -76,11 +77,19 @@ Page({
    */
   onShow() {
     const page = this;
+    if (getApp().globalData.header) {
+      this.loginLoad();
+    } else {
+      event.on('tokenReady', this, this.loginLoad)
+    }
+  },
 
+  loginLoad() {
+    const page = this
     wx.request({
       url: `${app.globalData.baseUrl}/products`,
       method: "GET",
-      header: getApp().globalData.header,
+      header: app.globalData.header,
       success(res) {
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
@@ -103,7 +112,6 @@ Page({
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

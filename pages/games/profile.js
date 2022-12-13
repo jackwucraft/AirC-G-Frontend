@@ -48,7 +48,7 @@ Page({
     wx.request({
       url: `${app.globalData.baseUrl}/products`,
       method: "GET",
-      header: getApp().globalData.header,
+      header: app.globalData.header,
       success(res) {
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
@@ -70,13 +70,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    const page = this;
     // this.loadBookings();
-    if (getApp().globalData.header) {
+    if (app.globalData.header) {
       this.loginLoad();
     } else {
       event.on('tokenReady', this, this.loginLoad)
     }
+    // console.log(app.globalData.user.avartar_url)
+    this.setData({avatarUrl: app.globalData.user.avartar_url})
   },
 
   // loadBookings() {
@@ -166,6 +167,7 @@ Page({
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail
     this.setData({ avatarUrl })
+    // console.log(this.data.avatarUrl)
     this.updateUserInfo()
   },
 
@@ -189,13 +191,14 @@ Page({
       avartar_url: avatarUrl
     }
     wx.request({
-      url: `${app.globalData.baseUrl}/users/${this.data.userId}`,
+      url: `${app.globalData.baseUrl}/users/${app.globalData.userId}`,
       method: "PUT",
       data: data,
       header: getApp().globalData.header,
       success(res) {
         console.log("user info update successfully!")
-        app.globalData.user.avartar_url = avatarUrl
+        // console.log(res)
+        app.globalData.user.avartar_url = res.data.user.avartar_url
         // console.log('response from PUT user', res.data)
         // const games = res.data.products.filter(product => product.sort === "game")
         // page.setData({ games: games })

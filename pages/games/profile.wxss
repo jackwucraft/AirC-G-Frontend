@@ -115,9 +115,9 @@
   font-family: system-ui;
 }
 
-.text2 {
+/* .text2 {
   font-size: 20rpx;
-}
+} */
 
 .input {
   text-align: center;
