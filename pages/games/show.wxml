@@ -32,9 +32,9 @@
       {{game.name}}
     </view>
     <view class="price-and-button">
-      <!-- <view class="game-price"> -->
-        <!-- {{game.price_per_day}} RMB/day -->
-      <!-- </view> -->
+      <!-- <view class="game-owner">
+        <image src="avartar_url" mode=""/>  {{user.nickName}}
+      </view> -->
       <button class="{{favorite_text === 'Favorite' ? 'unsaved' : 'saved'}}" bindtap="addlikes">
         <image wx:if="{{favorite_text === 'Favorite'}}" src="/images/Vector.png" class="star" mode=""/>
         {{favorite_text}}
@@ -42,6 +42,9 @@
     </view>
   </view>
   <view class="des-and-date">
+    <view class="platform">
+    <image class="platform-image" src="{{logo}}" mode=""/>{{platform}}
+    </view>
     <view class="des-title">
       Description
     </view>
@@ -66,7 +69,7 @@
     </picker>
   </view>
   <view class="btn-controller">
-    <button bindtap="goToBook" class="book-button">Book for {{dateBetween}} days</button>
+    <button bindtap="goToBook" class="book-button">Book for {{dateBetween}} {{day}}</button>
     <button open-type="share" data-id="share" class="share-button">Share</button>
   </view>
 </view>
