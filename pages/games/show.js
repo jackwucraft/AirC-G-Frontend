@@ -10,7 +10,8 @@ Page({
     startDate: '2022-12-01',
     endDate: '2022-12-02',
     dateBetween: 1,
-    favorite_text: "Favorite"
+    favorite_text: "Favorite",
+    day: "day",
   },
 
   loginShow() {
@@ -21,6 +22,11 @@ Page({
       header: getApp().globalData.header,
       success(res) {
         page.setData({game: res.data.product})
+        const platform = {ps5: "PlayStation 5", xbox: "Xbox", switch: "Switch"}
+        page.setData({platform: platform[res.data.product.platform]})
+        const logo = {ps5: "/images/playstation.svg", xbox: "/images/xbox.svg", switch: "/images/switch.svg"}
+        page.setData({logo: logo[res.data.product.platform]})
+
         console.log(page.data.game)
       }
     })
@@ -32,7 +38,7 @@ Page({
         // console.log(res.data.products.map(product => product.name))
         // console.log(page.data.game.name)
         if (res.data.products.map(product => product.id).includes(page.data.game.id)) {
-          page.setData({favorite_text: "Saved to Favorites!"})
+          page.setData({favorite_text: "Favorited!"})
         } else {
           page.setData({favorite_text: "Favorite"})
         }
@@ -52,7 +58,7 @@ Page({
     wx.showModal({
       title: 'Booking Status',
       content: 'Your booking has been made succesfully!',
-      cancelText:'Cancle',
+      cancelText:'Cancel',
       confirmText:'Confirm',
       success (res) {
         if (res.confirm) {
@@ -83,7 +89,7 @@ Page({
       data: data,
       success(res) {
         if (res.data.message === "create") {
-          page.setData({favorite_text: "Saved to Favorites!"})
+          page.setData({favorite_text: "Favorited!"})
         } else {
           page.setData({favorite_text: "Favorite"})
         }
@@ -111,6 +117,15 @@ Page({
     this.setData({
       dateBetween: parseInt(this.data.endDate.slice(-2), 10) - parseInt(this.data.startDate.slice(-2), 10)
     })
+    if (this.data.dateBetween > 1){
+      this.setData({
+        day: "days" 
+      })
+    }else{
+      this.setData({
+        day: "day"
+      })
+    } 
   },
 
   /**
