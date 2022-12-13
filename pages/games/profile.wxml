@@ -9,7 +9,6 @@
     <!-- <view class="name">{{user.nickname}}</view> -->
 
     <input class="input" placeholder="{{nickName}}"/>
-
   </view>
 </view>
 
