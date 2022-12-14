@@ -32,9 +32,9 @@
       {{game.name}}
     </view>
     <view class="owner-and-button">
-      <!-- <view>
-        <image src="{{user.avatar_url}}" mode=""/>
-      </view> -->
+      <view>
+        <image class="avatar-owner" src="{{user.avatar_url}}" mode=""/>
+      </view>
       <view class="game-owner">{{user.nickname}}</view>
       <button class="{{favorite_text === 'Favorite' ? 'unsaved' : 'saved'}}" bindtap="addlikes">
         <image wx:if="{{favorite_text === 'Favorite'}}" src="/images/Vector.png" class="star" mode=""/>
@@ -44,7 +44,8 @@
   </view>
   <view class="des-and-date">
     <view class="platform">
-    <image class="platform-image" src="{{logo}}" mode=""/>{{platform}}
+      <image class="platform-image" src="{{logo}}" mode=""/>
+      <view>{{platform}}</view> 
     </view>
     <view class="des-title">
       Description
@@ -70,7 +71,9 @@
     </picker>
   </view>
   <view class="btn-controller">
-    <button bindtap="goToBook" class="book-button">Book for {{dateBetween}} {{day}}</button>
+    <button bindtap="goToBook" wx:if="{{app.globalData.userId !== user.id}}" class="book-button">Book for {{dateBetween}} {{day}}</button>
+    <button bindtap="goToEdit" wx:if="{{app.globalData.userId === user.id}}"class="book-button">Edit</button>
+     
     <button open-type="share" data-id="share" class="share-button">Share</button>
   </view>
 </view>
