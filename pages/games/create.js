@@ -10,8 +10,37 @@ Page({
     userDescription: "",
     showArray: ['PlayStation5', 'Xbox', 'Switch'],
     array: ['ps5', 'xbox', 'switch'],
-    index: 0
+    index: 0,
+    uploadUrl: 'https://airgandc.oss-cn-shanghai.aliyuncs.com/images/game-4.jpg'
   },
+
+  handleImageUpload() {
+    const page = this
+    wx.showModal({
+      editable: true,
+      placeholderText: 'Please put an url here',
+      showCancel: true,
+      title: 'Upload your Picture',
+      complete: (res) => {
+        if (res.cancel) {
+          console.log("ERROR")
+        }
+        if (res.confirm) {
+          console.log("confirm", res.content)
+          page.setData({uploadUrl: res.content})
+        }
+      }
+    })
+    // wx.chooseImage({
+    //   count: 1,
+    //   sizeType: ['original', 'compressed'],
+    //   sourceType: ['album', 'camera'],
+    //   success(res) {
+    //     page.setData({ tempFilePaths: res.tempFilePaths})
+    //   }
+    // })
+  },
+
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -20,7 +49,7 @@ Page({
   },
 
   Upload(e) {
-    const data = { name: e.detail.value.name, description: e.detail.value.description, platform: this.data.array[e.detail.value.console], user_id: app.globalData.userId}
+    const data = { name: e.detail.value.name, description: e.detail.value.description, platform: this.data.array[e.detail.value.console], user_id: app.globalData.userId, picture_url: this.data.uploadUrl}
     console.log(data)
     wx.request({
       url: `${app.globalData.baseUrl}/products`,
@@ -60,7 +89,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-    
+    if (wx.getStorageSync('id')) {wx.removeStorageSync('id')}
   },
 
   /**

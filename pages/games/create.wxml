@@ -1,7 +1,11 @@
 <!--pages/games/create.wxml-->
 <view class="create-container">
 
-<view class="banner"></view>
+<view class="banner" bindtap="handleImageUpload" style="background-image: url('{{uploadUrl}}');">
+  <view class="upload-message">
+    Click to Upload Image
+  </view>
+</view>
 
 <form bindsubmit="Upload">
   <view class="title-card">
