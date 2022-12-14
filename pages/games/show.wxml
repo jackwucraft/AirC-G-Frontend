@@ -72,7 +72,7 @@
   </view>
   <view class="btn-controller">
     <button bindtap="goToBook" wx:if="{{userId !== user.id}}" class="book-button">Book {{dateBetween}} {{day}}</button>
-    <button bindtap="goToEdit" wx:if="{{userId === user.id}}"class="book-button">Edit</button>
+    <button bindtap="goToEdit" wx:if="{{userId === user.id}}"class="edit-button">Edit</button>
      
     <button open-type="share" data-id="share" class="share-button">Share</button>
   </view>

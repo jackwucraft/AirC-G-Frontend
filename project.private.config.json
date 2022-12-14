@@ -19,7 +19,7 @@
         {
           "name": "",
           "pathName": "pages/games/show",
-          "query": "id=1",
+          "query": "id=23",
           "launchMode": "default",
           "scene": null
         },

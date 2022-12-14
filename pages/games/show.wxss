@@ -189,8 +189,8 @@
 }
 
 .platform{
-  margin-top: 26rpx;
-  margin-bottom: 16rpx;
+  margin-top: 42rpx;
+  margin-bottom: 26rpx;
   display: flex;
 }
 
@@ -274,6 +274,18 @@
   /* flex-grow: 1;
   flex-shrink: 0; */
   /* margin-right: 16rpx; */
+  color: white;
+  padding: 16rpx 32rpx !important;
+  width: 47% !important;
+  margin: unset !important;
+  border: 4rpx solid #08303D; 
+  font-size: 32rpx;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.edit-button{
+  background-color: #35614b; 
   color: white;
   padding: 16rpx 32rpx !important;
   width: 47% !important;
