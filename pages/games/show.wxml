@@ -27,7 +27,7 @@
   <view class="banner" style="background-image: url('{{game.picture_url}}');background-size: 100%;">
     <image src="/images/back.png" mode="" bindtap="goToIndex" class="back-button"/>
   </view>
-  <view class="title-card">
+  <view class="title-card; {{game.platform === 'ps5' ? 'blue-shadow' : ''}}; {{game.platform === 'xbox' ? 'green-shadow' : ''}}; {{game.platform === 'switch' ? 'red-shadow' : ''}}">
     <view class="game-title">
       {{game.name}}
     </view>
