@@ -28,7 +28,7 @@ Page({
         const logo = {ps5: "/images/playstation.svg", xbox: "/images/xbox.svg", switch: "/images/switch.svg"}
         page.setData({logo: logo[res.data.product.platform]})
 
-        console.log(page.data.game)
+        console.log(page.data.user)
       }
     })
     wx.request({
