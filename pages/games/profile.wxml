@@ -16,17 +16,17 @@
 
   <view class="btn-container">
     <view class="btn  {{activeTab === 'bookings' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadBookings">
-      <image class="btn-icon" src="/images/预约表单.png" />
+      <!-- <image class="btn-icon" src="/images/预约表单.png" /> -->
       <view>Bookings</view>
     </view>
 
     <view class="btn  {{activeTab === 'uploads' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadUploads">
-      <image class="btn-icon" src="/images/upload.png" />
+      <!-- <image class="btn-icon" src="/images/upload.png" /> -->
       <view>Uploads</view>
     </view>
 
     <view class="btn {{activeTab === 'favorites' ? 'btn-active' : 'btn-inactive'}}" bindtap="loadFavorites">
-      <image class="btn-icon" src="/images/favorite (2).png" />
+      <!-- <image class="btn-icon" src="/images/favorite (2).png" /> -->
       <view>
         Favorites
       </view>

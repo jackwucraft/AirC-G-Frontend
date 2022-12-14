@@ -15,15 +15,15 @@
     <view class="subtitle">
       Console Type:
     </view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="console">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{showArray}}" name="console">
     <view class="picker">
-      {{array[index]}}
+      {{showArray[index]}}
     </view>
   </picker>
   <view class="subtitle">
       Description:
   </view>
-  <input type="text" value="{{userDescription}}" placeholder="description" name="description" class="description"/>
+  <textarea type="text" value="{{userDescription}}" placeholder="description" name="description" class="description"/>
   <button form-type="submit"> submit </button>
   </view>
 </form>

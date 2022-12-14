@@ -8,21 +8,8 @@ Page({
   data: {
     userName: "",
     userDescription: "",
+    showArray: ['PlayStation5', 'Xbox', 'Switch'],
     array: ['ps5', 'xbox', 'switch'],
-    objectArray: [
-      {
-        id: 0,
-        name: 'ps5'
-      },
-      {
-        id: 1,
-        name: 'xbox'
-      },
-      {
-        id: 2,
-        name: 'switch'
-      }
-    ],
     index: 0
   },
   bindPickerChange: function (e) {
@@ -42,6 +29,9 @@ Page({
       data: data,
       success(res) {
         console.log("success", res)
+        wx.switchTab({
+          url: '/pages/games/index',
+        })
       }
     })
   },
@@ -70,7 +60,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-
+    
   },
 
   /**
