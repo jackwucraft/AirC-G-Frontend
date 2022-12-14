@@ -40,6 +40,18 @@
   box-shadow: 4rpx 4rpx 16rpx rgba(0,0,0,0.4);
 }
 
+.green-shadow{
+  box-shadow: 4rpx 4rpx 16rpx rgba(0, 100, 0, 0.5);
+}
+
+.red-shadow{
+  box-shadow: 4rpx 4rpx 16rpx rgba(255, 0, 0, 0.5);
+}
+
+.blue-shadow{
+  box-shadow: 4rpx 4rpx 16rpx rgba(0, 54, 204, 0.5);
+}
+
 .title-input{
   border: 1rpx solid black;
   border-radius: 16rpx;
@@ -65,14 +77,14 @@
 }
 
 .picker {
-  padding: 10rpx 0rpx 10rpx 16rpx;
+  padding: 32rpx;
   border: 1rpx solid black;
   border-radius: 16rpx;
   margin-bottom: 16rpx;
 }
 
 .description {
-  padding: 10rpx 16rpx 10rpx 16rpx;
+  padding: 32rpx 16rpx 10rpx 16rpx;
   border: 1rpx solid black;
   border-radius: 16rpx;
   width: 586rpx !important;

@@ -8,7 +8,7 @@
 </view>
 
 <form bindsubmit="Upload">
-  <view class="title-card">
+  <view class="title-card; {{index === 0 ? 'blue-shadow' : ''}}; {{index === 1 ? 'green-shadow' : ''}}; {{index === 2 ? 'red-shadow' : ''}}">
     <view class="subtitle">Title:</view>
     <input value="{{productName}}" placeholder="name" name="name" class="title-input"/>
   </view>
