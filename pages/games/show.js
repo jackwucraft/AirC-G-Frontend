@@ -21,7 +21,7 @@ Page({
       method:"GET",
       header: getApp().globalData.header,
       success(res) {
-        page.setData({game: res.data.product})
+        page.setData({game: res.data.product, user: res.data.user})
         const platform = {ps5: "PlayStation 5", xbox: "Xbox", switch: "Switch"}
         page.setData({platform: platform[res.data.product.platform]})
         const logo = {ps5: "/images/playstation.svg", xbox: "/images/xbox.svg", switch: "/images/switch.svg"}

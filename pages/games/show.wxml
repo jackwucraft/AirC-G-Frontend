@@ -33,7 +33,7 @@
     </view>
     <view class="owner-and-button">
       <view class="game-owner">
-        <image src="{{game.user.avartar_url}}" mode=""/>
+        <image src="{{user.avatar_url}}" mode=""/>
       </view>
       <button class="{{favorite_text === 'Favorite' ? 'unsaved' : 'saved'}}" bindtap="addlikes">
         <image wx:if="{{favorite_text === 'Favorite'}}" src="/images/Vector.png" class="star" mode=""/>
