@@ -6,12 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userName: "",
-    userDescription: "",
+    productName: "",
+    productDescription: "",
+    uploadUrl: 'https://airgandc.oss-cn-shanghai.aliyuncs.com/images/game-4.jpg',
     showArray: ['PlayStation5', 'Xbox', 'Switch'],
     array: ['ps5', 'xbox', 'switch'],
     index: 0,
-    uploadUrl: 'https://airgandc.oss-cn-shanghai.aliyuncs.com/images/game-4.jpg'
   },
 
   handleImageUpload() {
@@ -51,18 +51,50 @@ Page({
   Upload(e) {
     const data = { name: e.detail.value.name, description: e.detail.value.description, platform: this.data.array[e.detail.value.console], user_id: app.globalData.userId, picture_url: this.data.uploadUrl}
     console.log(data)
-    wx.request({
-      url: `${app.globalData.baseUrl}/products`,
-      method:"POST",
-      header: getApp().globalData.header,
-      data: data,
-      success(res) {
-        console.log("success", res)
-        wx.switchTab({
-          url: '/pages/games/index',
-        })
-      }
-    })
+    // const page = this
+    if (wx.getStorageSync('id')) {
+      wx.request({
+        url: `${app.globalData.baseUrl}/products/${wx.getStorageSync('id')}`,
+        method:"PUT",
+        header: getApp().globalData.header,
+        data: data,
+        success(res) {
+          console.log("success edit", res)
+          wx.switchTab({
+            url: '/pages/games/index',
+          })
+        }
+      })
+    } else {
+      wx.request({
+        url: `${app.globalData.baseUrl}/products`,
+        method:"POST",
+        header: getApp().globalData.header,
+        data: data,
+        success(res) {
+          console.log("success", res)
+          wx.switchTab({
+            url: '/pages/games/index',
+          })
+        }
+      })
+    }
+  },
+
+  destroy() {
+    if (wx.getStorageSync('id')) {
+      wx.request({
+        url: `${app.globalData.baseUrl}/products/${wx.getStorageSync('id')}`,
+        method: "DELETE",
+        header: getApp().globalData.header,
+        success(res) {
+          console.log(res)
+          wx.switchTab({
+            url: '/pages/games/index',
+          })
+        }
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -82,14 +114,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    const page = this
+    if (wx.getStorageSync('id')) {
+      this.setData({Storage: true})
+      // console.log("onShow")
+      wx.request({
+        url: `${app.globalData.baseUrl}/products/${wx.getStorageSync('id')}`,
+        method:"GET",
+        header: getApp().globalData.header,
+        success(res) {
+          console.log(res.data.product)
+          page.setData({uploadUrl: res.data.product.picture_url, index: 0, productName: res.data.product.name, productDescription: res.data.product.description})
+        }
+      })
+    } else {
+      this.setData({Storage: false})
+    }
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-    if (wx.getStorageSync('id')) {wx.removeStorageSync('id')}
+    if (wx.getStorageSync('id')) {
+      wx.removeStorageSync('id')
+      // this.setData({Storage: false})
+    }
+    this.setData({uploadUrl: 'https://airgandc.oss-cn-shanghai.aliyuncs.com/images/game-4.jpg', index: 0, productName: '', productDescription: ''}) 
   },
 
   /**
