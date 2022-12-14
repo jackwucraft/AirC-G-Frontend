@@ -12,6 +12,17 @@ Page({
     showArray: ['PlayStation5', 'Xbox', 'Switch'],
     array: ['ps5', 'xbox', 'switch'],
     index: 0,
+    shadowClass: "blue-shadow"
+  },
+
+  setShadowClass(index) {
+    let shadowClass = "blue-shadow"
+    if (index === '1') {
+      shadowClass = "green-shadow"
+    } if (index === '2') {
+      shadowClass = "red-shadow" 
+    }
+    this.setData({shadowClass})
   },
 
   handleImageUpload() {
@@ -43,9 +54,9 @@ Page({
 
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
+    let index = e.detail.value
+    this.setShadowClass(index)
+    this.setData({index})
   },
 
   Upload(e) {
@@ -124,7 +135,9 @@ Page({
         header: getApp().globalData.header,
         success(res) {
           console.log(res.data.product)
-          page.setData({uploadUrl: res.data.product.picture_url, index: page.data.array.findIndex((element => element === res.data.product.platform)), productName: res.data.product.name, productDescription: res.data.product.description})
+          const index = page.data.array.findIndex((element => element === res.data.product.platform))
+          page.setData({uploadUrl: res.data.product.picture_url, index, productName: res.data.product.name, productDescription: res.data.product.description})
+          page.setShadowClass(index.toString())
         }
       })
     } else {
