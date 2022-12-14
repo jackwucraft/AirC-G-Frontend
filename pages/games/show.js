@@ -45,6 +45,7 @@ Page({
         }
       }
     })
+    page.setData({userId: app.globalData.userId})
   },
 
   goToIndex(e) {
@@ -70,7 +71,14 @@ Page({
       }
     })
   },
-
+  
+  goToEdit(e) {
+    const id = this.data.game.id
+    wx.setStorageSync("id", id)
+    wx.switchTab({
+      url: '/pages/games/create',
+    })
+  },
   // goToUpload(e) {
   //   console.log('goToUpload e', e)
   //   const id = this.data.game.id
