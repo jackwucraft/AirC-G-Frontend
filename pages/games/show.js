@@ -21,6 +21,12 @@ Page({
       method:"GET",
       header: getApp().globalData.header,
       success(res) {
+        // if (res.data.user.name === '') {
+        //   res.data.user.name = 'user'
+        // }
+        // if (res.data.user.avatar_url === '') {
+        //   res.data.user.avatar_url = 'https://airgandc.oss-cn-shanghai.aliyuncs.com/WechatIMG170%E7%9A%84%E5%89%AF%E6%9C%AC.png'
+        // }
         page.setData({game: res.data.product, user: res.data.user})
         // console.log(res)
         const platform = {ps5: "PlayStation 5", xbox: "Xbox", switch: "Switch"}

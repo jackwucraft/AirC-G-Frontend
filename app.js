@@ -33,8 +33,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl: "http://localhost:3000/api/v1"
-    // baseUrl: "https://airgandc.wogengapp.cn/api/v1"
+    // baseUrl: "http://localhost:3000/api/v1"
+    baseUrl: "https://airgandc.wogengapp.cn/api/v1"
     // userId: 6
   }
 })
