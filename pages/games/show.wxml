@@ -52,7 +52,8 @@
     </view>
     <view class="des-text">
       {{game.description}}
-    </view>
+      </view>
+    <view wx:if="{{userId !== user.id}}">
     <view class="picker-title">
       Booking Start Date
     </view>
@@ -69,6 +70,7 @@
           {{endDate}}
       </view>
     </picker>
+    </view>
   </view>
   <view class="btn-controller">
     <button bindtap="goToBook" wx:if="{{userId !== user.id}}" class="book-button">Book {{dateBetween}} {{day}}</button>
