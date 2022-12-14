@@ -154,7 +154,7 @@ Page({
       // this.setData({Storage: false})
     }
     this.setData({uploadUrl: 'https://airgandc.oss-cn-shanghai.aliyuncs.com/images/game-4.jpg', index: 0, productName: '', productDescription: ''}) 
-    page.setShadowClass(0)
+    this.setData({shadowClass: "blue-shadow"})
   },
 
   /**
