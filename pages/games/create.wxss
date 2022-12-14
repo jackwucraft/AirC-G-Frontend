@@ -69,3 +69,18 @@
   border-radius: 16rpx;
   width: 586rpx !important;
 }
+
+.submit-button{
+  background-color: #08303D; 
+  /* flex-grow: 1;
+  flex-shrink: 0; */
+  /* margin-right: 16rpx; */
+  color: white;
+  padding: 16rpx auto !important;
+  width: 622rpx !important;
+  margin: unset !important;
+  border: 4rpx solid #08303D; 
+  font-size: 32rpx;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

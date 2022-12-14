@@ -24,7 +24,7 @@
       Description:
   </view>
   <textarea type="text" value="{{userDescription}}" placeholder="description" name="description" class="description"/>
-  <button form-type="submit"> submit </button>
+    <button form-type="submit" class="submit-button"> submit </button>
   </view>
 </form>
 </view>
