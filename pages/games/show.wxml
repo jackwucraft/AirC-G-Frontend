@@ -71,8 +71,8 @@
     </picker>
   </view>
   <view class="btn-controller">
-    <button bindtap="goToBook" wx:if="{{app.globalData.userId !== user.id}}" class="book-button">Book for {{dateBetween}} {{day}}</button>
-    <button bindtap="goToEdit" wx:if="{{app.globalData.userId === user.id}}"class="book-button">Edit</button>
+    <button bindtap="goToBook" wx:if="{{getApp().globalData.userId !== user[id]}}" class="book-button">Book for {{dateBetween}} {{day}}</button>
+    <button bindtap="goToEdit" wx:if="{{getApp().globalData.userId === user[id]}}"class="book-button">Edit</button>
      
     <button open-type="share" data-id="share" class="share-button">Share</button>
   </view>
