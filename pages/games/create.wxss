@@ -88,7 +88,7 @@
   border: 1rpx solid black;
   border-radius: 16rpx;
   width: 586rpx !important;
-  margin-bottom: 120rpx;
+  margin-bottom: 75rpx;
 }
 
 .submit-button{

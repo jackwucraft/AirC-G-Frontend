@@ -124,7 +124,7 @@ Page({
         header: getApp().globalData.header,
         success(res) {
           console.log(res.data.product)
-          page.setData({uploadUrl: res.data.product.picture_url, index: 0, productName: res.data.product.name, productDescription: res.data.product.description})
+          page.setData({uploadUrl: res.data.product.picture_url, index: page.data.array.findIndex((element => element === res.data.product.platform)), productName: res.data.product.name, productDescription: res.data.product.description})
         }
       })
     } else {
