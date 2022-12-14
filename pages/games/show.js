@@ -22,6 +22,7 @@ Page({
       header: getApp().globalData.header,
       success(res) {
         page.setData({game: res.data.product, user: res.data.user})
+        // console.log(res)
         const platform = {ps5: "PlayStation 5", xbox: "Xbox", switch: "Switch"}
         page.setData({platform: platform[res.data.product.platform]})
         const logo = {ps5: "/images/playstation.svg", xbox: "/images/xbox.svg", switch: "/images/switch.svg"}
@@ -67,7 +68,7 @@ Page({
           console.log('用户点击取消')
         }
       }
-    })    
+    })
   },
 
   // goToUpload(e) {
@@ -119,13 +120,13 @@ Page({
     })
     if (this.data.dateBetween > 1){
       this.setData({
-        day: "days" 
+        day: "days"
       })
     }else{
       this.setData({
         day: "day"
       })
-    } 
+    }
   },
 
   /**
@@ -139,7 +140,7 @@ Page({
       event.on('tokenReady', this, this.loginShow)
     }
   },
-  
+
 
 
   /**
@@ -153,7 +154,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-    
+
   },
 
   /**
