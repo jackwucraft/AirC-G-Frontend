@@ -38,3 +38,10 @@ App({
     // userId: 6
   }
 })
+
+// {
+//   "pagePath": "pages/games/create",
+//   "iconPath": "/images/plus 1.png",
+//   "selectedIconPath": "/images/plus.png",
+//   "text": "create"
+// },
