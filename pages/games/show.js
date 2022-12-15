@@ -68,14 +68,31 @@ Page({
       content: 'Your booking has been made succesfully!',
       cancelText:'Cancel',
       confirmText:'Confirm',
-      success (res) {
+      success: (res) => {
         if (res.confirm) {
-          console.log('用户点击确定')
+          console.log('user confirm')
+          this.createBook()
+          wx.navigateBack()
         } else if (res.cancel) {
-          console.log('用户点击取消')
+          console.log('user cancel')
         }
       }
     })
+  },
+
+  createBook() {
+    // const page = this
+    const data = { date: { time_from: this.data.startDate, time_to: this.data.endDate } }
+    const id = this.data.game.id
+    wx.request({
+      url: `${app.globalData.baseUrl}/products/${id}/${app.globalData.userId}/bookings`,
+      method:"POST",
+      header: app.globalData.header,
+      data: data,
+      success(res) {
+        console.log(res)
+      }
+      })
   },
   
   goToEdit(e) {
