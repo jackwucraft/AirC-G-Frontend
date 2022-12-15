@@ -52,12 +52,19 @@ Page({
       success(res) {
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
-        page.setData({ games: games })
+        // page.setData({ games: games })
         page.setData({uploads: games.filter(game => game.user_id == app.globalData.userId)})
         wx.hideLoading()
         page.setData({activeTab: "bookings"})
-      }
+      },
     })
+    wx.request({
+      url: `${app.globalData.baseUrl}/users/${app.globalData.userId}/bookings`,
+      method: "GET",
+      header: app.globalData.header,
+      success(res) {
+        page.setData({games: res.data.games})
+      }})
     if (app.globalData.user.avatar_url !== null) {
       this.setData({avatarUrl: app.globalData.user.avatar_url}) }
     if (app.globalData.user.nickname !== null) {

@@ -40,6 +40,18 @@
   box-shadow: 4rpx 4rpx 16rpx rgba(0,0,0,0.4);
 }
 
+.green-shadow{
+  box-shadow: 4rpx 4rpx 16rpx rgba(0, 100, 0, 0.5);
+}
+
+.red-shadow{
+  box-shadow: 4rpx 4rpx 16rpx rgba(255, 0, 0, 0.5);
+}
+
+.blue-shadow{
+  box-shadow: 4rpx 4rpx 16rpx rgba(0, 54, 204, 0.5);
+}
+
 .title-input{
   border: 1rpx solid black;
   border-radius: 16rpx;
@@ -65,18 +77,18 @@
 }
 
 .picker {
-  padding: 10rpx 0rpx 10rpx 16rpx;
+  padding: 32rpx;
   border: 1rpx solid black;
   border-radius: 16rpx;
   margin-bottom: 16rpx;
 }
 
 .description {
-  padding: 10rpx 16rpx 10rpx 16rpx;
+  padding: 32rpx 16rpx 10rpx 16rpx;
   border: 1rpx solid black;
   border-radius: 16rpx;
   width: 586rpx !important;
-  margin-bottom: 120rpx;
+  margin-bottom: 75rpx;
 }
 
 .submit-button{
@@ -92,4 +104,39 @@
   font-size: 32rpx;
   font-weight: 900;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-button{
+  background-color: #08303D; 
+  /* flex-grow: 1;
+  flex-shrink: 0; */
+  /* margin-right: 16rpx; */
+  color: white;
+  padding: 16rpx 32rpx !important;
+  width: 47% !important;
+  margin: unset !important;
+  border: 4rpx solid #08303D; 
+  font-size: 32rpx;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.destroy-button{
+  /* flex-grow: 1;
+  flex-shrink: 0; */
+  padding: 16rpx 32rpx !important;
+  width: 47% !important;
+  margin: unset !important;
+  border: 4rpx solid black;
+  color: rgb(209, 24, 24);
+  font-size: 32rpx;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* margin-left: 16rpx !important; */
 }

@@ -8,9 +8,9 @@
 </view>
 
 <form bindsubmit="Upload">
-  <view class="title-card">
+  <view class="title-card {{shadowClass}}">
     <view class="subtitle">Title:</view>
-    <input value="{{userName}}" placeholder="name" name="name" class="title-input"/>
+    <input value="{{productName}}" placeholder="name" name="name" class="title-input"/>
   </view>
   <view class="des-and-con">
     <!-- <view class="cardpic">
@@ -27,8 +27,12 @@
   <view class="subtitle">
       Description:
   </view>
-  <textarea type="text" value="{{userDescription}}" placeholder="description" name="description" class="description"/>
-    <button form-type="submit" class="submit-button"> submit </button>
+  <textarea type="text" value="{{productDescription}}" placeholder="description" name="description" class="description"/>
+    <button wx:if="{{!Storage}}" form-type="submit" class="submit-button"> Submit </button>
+    <view class="button-container">
+      <button wx:if="{{Storage}}" form-type="submit" class="edit-button"> Edit </button>
+      <button wx:if="{{Storage}}" bindtap="destroy" class="destroy-button"> Destroy </button>
+    </view>
   </view>
 </form>
 </view>

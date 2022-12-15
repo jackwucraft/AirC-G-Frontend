@@ -113,7 +113,7 @@ swiper {
 }
 
 .test image {
-  width: 150rpx;
+  width: 150rpx !important;
 }
 
 .test-card {
