@@ -7,7 +7,7 @@
   </view>
 </view>
 
-<form bindsubmit="Upload">
+<form bindsubmit="checkBeforeUpload">
   <view class="title-card {{shadowClass}}">
     <view class="subtitle">Title:</view>
     <input value="{{productName}}" placeholder="name" name="name" class="title-input"/>

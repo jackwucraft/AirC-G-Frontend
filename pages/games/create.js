@@ -59,6 +59,19 @@ Page({
     this.setData({index})
   },
 
+  checkBeforeUpload(e) {
+    if (e.detail.value.name === '' || e.detail.value.description === '') {
+      wx.showModal({
+        title: '',
+        showCancel: false,
+        confirmText: 'confirm',
+        content: 'Please fill the title and description before upload'
+      })
+    } else {
+      this.Upload(e)
+    }
+  },
+
   Upload(e) {
     const data = { name: e.detail.value.name, description: e.detail.value.description, platform: this.data.array[e.detail.value.console], user_id: app.globalData.userId, picture_url: this.data.uploadUrl}
     console.log(data)
