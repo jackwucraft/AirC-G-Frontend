@@ -59,6 +59,32 @@ Page({
     this.setData({index})
   },
 
+  checkBeforeUpload(e) {
+    const name = e.detail.value.name
+    const description = e.detail.value.description
+    if (this.validateInput(name) || this.validateInput(description)) {
+      wx.showModal({
+        title: '',
+        showCancel: false,
+        confirmText: 'confirm',
+        content: 'Input must have only letters and numbers'
+      })
+    } else {
+      this.Upload(e)
+    }
+  },
+
+  validateInput(e) {
+    let regexp = new RegExp(/^[a-zA-Z0-9,\.\s]+$/)
+    return !e.match(regexp)
+    // let value = e.detail.value
+    // let name = e.currentTarget.dataset.name
+    // let regexp = new RegExp(/^[a-zA-Z0-9,\.\s]+$/)
+    // if (value.match(regexp)) {
+    //   this.setData([`${name}`]: value)
+    // }
+  },
+
   Upload(e) {
     const data = { name: e.detail.value.name, description: e.detail.value.description, platform: this.data.array[e.detail.value.console], user_id: app.globalData.userId, picture_url: this.data.uploadUrl}
     console.log(data)

@@ -93,16 +93,19 @@ Page({
       success(res) {
         console.log('response from GET stories', res.data)
         const games = res.data.products.filter(product => product.sort === "game")
+        // console.log(games)
         page.setData({games: games})
         page.setData({gamesStorage: games})
+        // console.log(res.data.products.filter(product => product.sort === "game"))
         // const first = games[1]
         // page.setData({first})
         const swiper_data = [] //[games[Math.floor(Math.random()*games.length)]
+        const games2 = res.data.products.filter(product => product.sort === "game")
         for (var i = 0;i < 5; i++) {
-          if (games.length > 0) {
-            var randindex = Math.floor(Math.random()*games.length)
-            swiper_data[i] = games[randindex]
-            games.splice(randindex, 1)
+          if (games2.length > 0) {
+            var randindex = Math.floor(Math.random()*games2.length)
+            swiper_data[i] = games2[randindex]
+            games2.splice(randindex, 1)
           } else {
             break
           }
